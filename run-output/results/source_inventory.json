@@ -1,0 +1,1817 @@
+{
+  "stage": "stage01",
+  "status": "complete",
+  "workspace": "/Users/xiaxue/AILab/SciForge",
+  "source_root": "/Users/xiaxue/AILab/SciForge/cross-scale-bench/case45-local-demo/input/source-data",
+  "case_contract": {
+    "summary": "Case 4.5: Cross-Scale Cell Atlas from Multi-Database Integration. Anchored on Papalexi/Satija ECCITE-seq (GSE153056) with strict raw GEO route. L0-L5 layers: perturbation, target, pathway, RNA response, ADT protein response, endpoint phenotype (DepMap/Achilles THP-1). L6 excluded. P0-P6 construct the dataset; P7 performs automated exploratory analysis and visualization. External caches for L1/L2/L5 from UniProt, Reactome/GO, and DepMap/Achilles.",
+    "manifest": {
+      "path": "cross-scale-bench/case45-local-demo/input/source-data/CASE.md",
+      "lines": 634,
+      "bytes": 37095,
+      "sha256": "c4a94f77482d6dd913cd861144bad0f6cfab031fc2d1a74c6498d474d6e5217d",
+      "first_20_lines": [
+        "# 4.5 Cross-Scale Cell Atlas from Multi-Database Integration",
+        "",
+        "## Scenario",
+        "",
+        "A researcher aims to construct a cross-scale cellular dataset anchored on",
+        "Papalexi/Satija ECCITE-seq. SciForge's agent runtime uses the strict GEO",
+        "`GSE153056` raw/supplementary route to derive scRNA and ADT protein response",
+        "measurements, adds external target and pathway annotations, and aligns the",
+        "resulting records with DepMap/Achilles endpoint phenotypes in THP-1.",
+        "",
+        "The demo scope is `L0-L5 only`; `L6` microenvironment context is excluded by",
+        "design.",
+        "",
+        "Downstream agents perform quality checks, flag missing annotations and alignment",
+        "gaps, and generate a data provenance report that traces every record to native",
+        "ECCITE-seq measurements, UniProt, Reactome/GO, and DepMap/Achilles sources. The",
+        "integrated atlas can then feed into the Exploration Hub for hypothesis",
+        "generation or into AI4AI modeling workflows.",
+        "",
+        "This scenario demonstrates SciForge's ability to orchestrate data-integration"
+      ],
+      "last_20_lines": [
+        "- Alignment audit: join status for guide, target_gene, UniProt, Reactome/GO, and DepMap/Achilles.",
+        "- Figure: source coverage figure path and whether it was generated from this run's outputs.",
+        "- P7 analysis: analysis directory, P7 figure directory, analysis manifest, report, derived table list, figure list, and QC status.",
+        "- P7 required figures/analyses: summary statistics, L0-L5 coverage heatmap or matrix, cross-scale linkage visualization, guide-level case studies, and measured-vs-external interpretation notes.",
+        "- P7 context-expansion value: what L1/L2/L4/L5 add beyond L0-L3, mechanism chains that become interpretable, examples where added context changes prioritization or interpretation, and limitations where evidence is missing or prior-only.",
+        "- P7 causal-readiness assessment: supported causal questions, required assumptions, remaining confounders/batch/context factors, whether mediation-style L0->L3->L4->L5 hypotheses are plausible, and which claims must stay descriptive rather than causal.",
+        "- Execution trace: trace and JSONL event paths, plus parse status.",
+        "- Script provenance: scripts used for every phase, command lines, and whether",
+        "  they were committed with the phase outputs.",
+        "- Phase status: P0-P7 status artifacts and whether each phase passed.",
+        "- Git status: remote commit hash, local monitor commit hash if available, clean/dirty state, and push status.",
+        "- Autonomy assessment: per-phase `autonomous`, `assisted`, or `codex-orchestrated`, with reasons.",
+        "- Next-step recommendation: post-P7 follow-up proposal only; do not execute beyond P7 in this task.",
+        "",
+        "After completion, summarize what was generated, where files are located, whether",
+        "live retrieval, local server data, or fixtures were used, and how the L0-L5",
+        "atlas plus P7 outputs can feed the Exploration Hub or AI4AI modeling workflows.",
+        "The completion summary must explicitly report the full dataset directory, file",
+        "inventory, row counts, remote-only large files, P7 analysis/visualization",
+        "outputs, context-expansion value conclusions, and causal-readiness conclusions."
+      ]
+    }
+  },
+  "inventory": {
+    "total_files": 285,
+    "total_bytes": 815028245,
+    "categories": {
+      "atlas": {
+        "count": 3,
+        "total_bytes": 30445
+      },
+      "contract": {
+        "count": 1,
+        "total_bytes": 37095
+      },
+      "dataset": {
+        "count": 17,
+        "total_bytes": 191640
+      },
+      "external-cache": {
+        "count": 8,
+        "total_bytes": 551202801
+      },
+      "figure": {
+        "count": 1,
+        "total_bytes": 35242
+      },
+      "processed": {
+        "count": 14,
+        "total_bytes": 5358856
+      },
+      "raw": {
+        "count": 8,
+        "total_bytes": 257200542
+      },
+      "report": {
+        "count": 2,
+        "total_bytes": 3908
+      },
+      "result": {
+        "count": 113,
+        "total_bytes": 454982
+      },
+      "script": {
+        "count": 118,
+        "total_bytes": 512734
+      }
+    }
+  },
+  "files": [
+    {
+      "relative_path": "CASE.md",
+      "category": "contract",
+      "size_bytes": 37095,
+      "sha256": "c4a94f77482d6dd913cd861144bad0f6cfab031fc2d1a74c6498d474d6e5217d"
+    },
+    {
+      "relative_path": "atlas/manifest.json",
+      "category": "atlas",
+      "size_bytes": 163,
+      "sha256": "575dfa398fe04a8ecc675c9ccb57ca6965b78eae9f1b9cd4d36f61ba4610c207"
+    },
+    {
+      "relative_path": "atlas/schema_map.json",
+      "category": "atlas",
+      "size_bytes": 113,
+      "sha256": "0f6b36d8cd3fd0af29936a864022a48d713de2e6ced621c3546424092cd80c5b"
+    },
+    {
+      "relative_path": "atlas/unified_cell_atlas.jsonl",
+      "category": "atlas",
+      "size_bytes": 30169,
+      "sha256": "77224f37e50c898a1e64583dc57b8cb8930fbb781b1dfb44aec788d9d370f763"
+    },
+    {
+      "relative_path": "data/external/depmap/CRISPRGeneEffect.csv",
+      "category": "external-cache",
+      "size_bytes": 428678699,
+      "sha256": "3d8f3ec6dbf2db7ff834b79b508622ec0b226f3518003fe96ecf5a4fcf167e3b"
+    },
+    {
+      "relative_path": "data/external/depmap/Model.csv",
+      "category": "external-cache",
+      "size_bytes": 645696,
+      "sha256": "b7a0c1385e6cef30132b56aff61f1261d11e3f490490b355c430d32ee0dbdcfa"
+    },
+    {
+      "relative_path": "data/external/reactome_go/ReactomePathways.txt",
+      "category": "external-cache",
+      "size_bytes": 1583655,
+      "sha256": "eac3ac074b3849a6d928260f4f71920f346584b0114afa7b60fcc8e40eefd9ec"
+    },
+    {
+      "relative_path": "data/external/reactome_go/UniProt2Reactome_All_Levels.txt",
+      "category": "external-cache",
+      "size_bytes": 116822208,
+      "sha256": "3796b3368f673bea7b641ff80a2a2eb08034625b94d0cccdc88ce1505b03b438"
+    },
+    {
+      "relative_path": "data/external/reactome_go/uniprot_human_reviewed_accession_gene.tsv",
+      "category": "external-cache",
+      "size_bytes": 700667,
+      "sha256": "f6f5f58d1464262faea68de9265082195a97dfe73d5cea7bf4c5c3a4daeb7e24"
+    },
+    {
+      "relative_path": "data/external/uniprot/pbmc_parse10m_cytokine_axis_uniprot_cache.tsv",
+      "category": "external-cache",
+      "size_bytes": 715720,
+      "sha256": "10113f710391ed9900764a48fbe00150017e57a842051a37d5a46f7eadd74538"
+    },
+    {
+      "relative_path": "data/external/uniprot/replogle_uniprot_l1_l2_annotations.tsv.gz",
+      "category": "external-cache",
+      "size_bytes": 2055940,
+      "sha256": "cb47cd8d20c60dfe1e5233dc38a6e9abe5253bf5b8e275dad5ff6d7778562624"
+    },
+    {
+      "relative_path": "data/external/uniprot/uniprot_human_reviewed_l1_l2.tsv.gz",
+      "category": "external-cache",
+      "size_bytes": 216,
+      "sha256": "62bf1b39646a4a1cbc0222f38e4d05a80bc80bb29b2ce47573fe0d9d578e7da4"
+    },
+    {
+      "relative_path": "data/processed/case45_l0_l5/case45_p0_20260708T1015Z/guide_cell_assignment.tsv",
+      "category": "processed",
+      "size_bytes": 1305690,
+      "sha256": "5b28343001b3faef7c3f5949bbf6e606727b48488135345b321f813cb9b23140"
+    },
+    {
+      "relative_path": "data/processed/case45_l0_l5/case45_p0_20260708T1015Z/l3_guide_rna_response.blocker.resolved.json",
+      "category": "processed",
+      "size_bytes": 1211,
+      "sha256": "40861e76fd39ea43cb233b468d4a36d10de5b5966965a0f77b3c4ed3ead8412e"
+    },
+    {
+      "relative_path": "data/processed/case45_l0_l5/case45_p0_20260708T1015Z/l3_guide_rna_response.json",
+      "category": "processed",
+      "size_bytes": 125882,
+      "sha256": "e99502a13461bf0f7c51fc908001b00eea53f0e59f89a590c3232ac4e720805f"
+    },
+    {
+      "relative_path": "data/processed/case45_l0_l5/case45_p0_20260708T1015Z/l3_guide_rna_response.tsv",
+      "category": "processed",
+      "size_bytes": 84888,
+      "sha256": "377344a9178d2d130b2d8258fdb45c0bea55f3cd678f1bb562afc789f8fec5b1"
+    },
+    {
+      "relative_path": "data/processed/case45_l0_l5/case45_p0_20260708T1015Z/l4_guide_adt_response.json",
+      "category": "processed",
+      "size_bytes": 36401,
+      "sha256": "0363b534c79d3a85b1eff55ec78130785358b6988f2abc31c2799dfa320e45f2"
+    },
+    {
+      "relative_path": "data/processed/case45_l0_l5/case45_p0_20260708T1015Z/l4_guide_adt_response.tsv",
+      "category": "processed",
+      "size_bytes": 18082,
+      "sha256": "9a3fe77c79b00383752d61d66f82b1e4b7596052b3565be49bff4f0d47e5d309"
+    },
+    {
+      "relative_path": "data/processed/case45_l0_l5/case45_p0_20260708T1015Z/metadata_cells.tsv",
+      "category": "processed",
+      "size_bytes": 2468007,
+      "sha256": "ce0d937a2f76e4d21271fbb17ef4a3a5e7a7566a7cd8271a8e71cb8516ba8554"
+    },
+    {
+      "relative_path": "data/processed/case45_l0_l5/case45_p0_20260708T1015Z/processed_manifest.json",
+      "category": "processed",
+      "size_bytes": 4561,
+      "sha256": "d10b64ccc51aadecf12195f3683e8de6362483227b0196e46fc91d17296d34eb"
+    },
+    {
+      "relative_path": "data/processed/case45_l0_l5/case45_p0_20260708T1015Z/raw_matrix_inventory.json",
+      "category": "processed",
+      "size_bytes": 4182,
+      "sha256": "1332eaabfd93a3ba008603b8957c8db2c0c72fed0371e92d613596c41da48ec3"
+    },
+    {
+      "relative_path": "data/processed/case45_l0_l5/case45_p0_20260708T1015Z/selected_adt_counts.tsv",
+      "category": "processed",
+      "size_bytes": 287770,
+      "sha256": "2a963466e8af200bdfee240ba0d4cfd66551fc8d4ad4d2d12bf9675b27465a5e"
+    },
+    {
+      "relative_path": "data/processed/case45_l0_l5/case45_p0_20260708T1015Z/selected_cdna_counts.summary.json",
+      "category": "processed",
+      "size_bytes": 548,
+      "sha256": "ae0b047e25066f9803d8381668f54d2e53babe61f1317f71140e52087946cfe0"
+    },
+    {
+      "relative_path": "data/processed/case45_l0_l5/case45_p0_20260708T1015Z/selected_cdna_counts_limitation.md",
+      "category": "processed",
+      "size_bytes": 298,
+      "sha256": "3d8c1d5ddec1e7ab4ec37c46bf65d29c461aa87206bd7344e3314926e064f243"
+    },
+    {
+      "relative_path": "data/processed/case45_l0_l5/case45_p0_20260708T1015Z/selected_cdna_counts_summary.tsv",
+      "category": "processed",
+      "size_bytes": 298,
+      "sha256": "c6305a5386746a1401280930f06a480bbcaf355786a1eaf1c40356b6340246d1"
+    },
+    {
+      "relative_path": "data/processed/case45_l0_l5/case45_p0_20260708T1015Z/selected_cells.tsv",
+      "category": "processed",
+      "size_bytes": 1021038,
+      "sha256": "55783467db465edac3289d5f1ea2cdbbae6c8272ea60280b46ca1099be8ec222"
+    },
+    {
+      "relative_path": "data/raw/GSE153056/GSE153056_CITE_metadata.tsv.gz",
+      "category": "raw",
+      "size_bytes": 287588,
+      "sha256": "782669e7340a7e1cce289ccd3c48995589837769a602ef24eeee273fb6db685b"
+    },
+    {
+      "relative_path": "data/raw/GSE153056/GSE153056_ECCITE_Arrayed_metadata.tsv.gz",
+      "category": "raw",
+      "size_bytes": 738915,
+      "sha256": "37972c4df7727e527a74d4881c02e1bb26fe00a19560b27fcc3e17a30016d19c"
+    },
+    {
+      "relative_path": "data/raw/GSE153056/GSE153056_ECCITE_metadata.tsv.gz",
+      "category": "raw",
+      "size_bytes": 1061834,
+      "sha256": "7059b0cb857dc344e6bb53dbdc5ccadccb25bb069372ed6f45eff46b7e992a76"
+    },
+    {
+      "relative_path": "data/raw/GSE153056/GSE153056_RAW.tar",
+      "category": "raw",
+      "size_bytes": 128317440,
+      "sha256": "97bf91bfe8c04d751ade43ba6c7441366018ab26e466e55a315499909f4c5462"
+    },
+    {
+      "relative_path": "data/raw/GSE153056/GSM4633605_CITE_cDNA_counts.tsv.gz",
+      "category": "raw",
+      "size_bytes": 22773984,
+      "sha256": "b3a49df8cc74ee93079a7aad99397b1ee1568c9f08da53e2de7b23e6c465799f"
+    },
+    {
+      "relative_path": "data/raw/GSE153056/GSM4633608_ECCITE_Arrayed_cDNA_counts.tsv.gz",
+      "category": "raw",
+      "size_bytes": 39883220,
+      "sha256": "773b7fb63372f976358760b0bcacab19c7fb89d1e91a3446d1ab8290361c40af"
+    },
+    {
+      "relative_path": "data/raw/GSE153056/GSM4633614_ECCITE_cDNA_counts.tsv.gz",
+      "category": "raw",
+      "size_bytes": 64135801,
+      "sha256": "2acb14a10b95f9b39536d0aec42896f30f6256332ccd336a2b01d037316b6080"
+    },
+    {
+      "relative_path": "data/raw/GSE153056/filelist.txt",
+      "category": "raw",
+      "size_bytes": 1760,
+      "sha256": "8d29aab6afcb92660933dc4487fffa94cf9deeca4e2af72d6974085bcc1d28c2"
+    },
+    {
+      "relative_path": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/README.md",
+      "category": "dataset",
+      "size_bytes": 169,
+      "sha256": "157e7bfd7136be4c88afd02a00978f47eb766c1f59a4444c3062c21bb6dcbb69"
+    },
+    {
+      "relative_path": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/dataset_manifest.json",
+      "category": "dataset",
+      "size_bytes": 2481,
+      "sha256": "f30eba98b8d0b694dc15480fa99f07d8e1b1a55339f5a53e58595b18cc404cb4"
+    },
+    {
+      "relative_path": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/provenance/provenance.json",
+      "category": "dataset",
+      "size_bytes": 454,
+      "sha256": "b462fd0695d44a171b10d43303d202ee64b6bee038453e8a7ed42a711d50c8f1"
+    },
+    {
+      "relative_path": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/qc/qc_summary.json",
+      "category": "dataset",
+      "size_bytes": 146,
+      "sha256": "d257a39556e794795f2d2307b67ba50426a888bc070d1e27f7d69497c61dfc7a"
+    },
+    {
+      "relative_path": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/reports/provenance_report.md",
+      "category": "dataset",
+      "size_bytes": 89,
+      "sha256": "52fb9ffb58a0b0d5e89a03b61e166b4560e1f574052e7f76a25cefc848730df0"
+    },
+    {
+      "relative_path": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/reports/quality_check.md",
+      "category": "dataset",
+      "size_bytes": 89,
+      "sha256": "52fb9ffb58a0b0d5e89a03b61e166b4560e1f574052e7f76a25cefc848730df0"
+    },
+    {
+      "relative_path": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/results/stage3_4_manifest_json_repair.json",
+      "category": "dataset",
+      "size_bytes": 4428,
+      "sha256": "cd67297e328a9e450b5c74702e234e9d629a15a17fa07938f52f6ada4b445373"
+    },
+    {
+      "relative_path": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/results/stage3_4_manifest_json_repair.md",
+      "category": "dataset",
+      "size_bytes": 103,
+      "sha256": "59b719c7ef01a6d9a7e4bc0c422d3e424c8a1a90bbf8b47fdf75a3164f862959"
+    },
+    {
+      "relative_path": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/schema.json",
+      "category": "dataset",
+      "size_bytes": 1822,
+      "sha256": "77ea8bc1ced7a94de3ca1b7253ff3e04f4e63e88fd5db6daf3468b1cc5890b7d"
+    },
+    {
+      "relative_path": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/schema.json.bak",
+      "category": "dataset",
+      "size_bytes": 1064,
+      "sha256": "86ace11f72f9fc2369c6f986849310480be618374ecefbd7b3bed535d3ef911a"
+    },
+    {
+      "relative_path": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l0_perturbation.json",
+      "category": "dataset",
+      "size_bytes": 7267,
+      "sha256": "4fe92a7e9919e38f3c1950cacb0bd197b4937cfef407ef1215269099273edaaf"
+    },
+    {
+      "relative_path": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l1_uniprot.json",
+      "category": "dataset",
+      "size_bytes": 3236,
+      "sha256": "962f50771027257581c1a480df6036aacc63e52b76fb93d2cbfa9ab2dc133e44"
+    },
+    {
+      "relative_path": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l2_reactome.json",
+      "category": "dataset",
+      "size_bytes": 7369,
+      "sha256": "6b0374a0ac8b587653ed3694cab47d79de93644c73edc0bdcf0881038356c963"
+    },
+    {
+      "relative_path": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l3_guide_rna_response.json",
+      "category": "dataset",
+      "size_bytes": 125882,
+      "sha256": "e99502a13461bf0f7c51fc908001b00eea53f0e59f89a590c3232ac4e720805f"
+    },
+    {
+      "relative_path": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l3_rna_summary.json",
+      "category": "dataset",
+      "size_bytes": 613,
+      "sha256": "ea96d483d1849239b31ca6dc020d75a85b3d537c31566f6d997d98d9cb8942e7"
+    },
+    {
+      "relative_path": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "category": "dataset",
+      "size_bytes": 31755,
+      "sha256": "7546e744ccbc79940aa3ad9d22c2d69cb4b6827cf63e100a9dab980b42deb279"
+    },
+    {
+      "relative_path": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l5_depmap.json",
+      "category": "dataset",
+      "size_bytes": 4673,
+      "sha256": "270b2ebbf7f6af29b42149236fb6b5b7335cc8997aba26497b2304fb48ebbcf1"
+    },
+    {
+      "relative_path": "figures/source_coverage.png",
+      "category": "figure",
+      "size_bytes": 35242,
+      "sha256": "02a4f5785f1bf65308419d8b4313d4f119609f4216d14b9217a064e9a2ce83d3"
+    },
+    {
+      "relative_path": "reports/provenance_report.md",
+      "category": "report",
+      "size_bytes": 2699,
+      "sha256": "998076abd1da88bf383aea4dc33a9de6d22a71a0cf60f262b7f29aaae058601e"
+    },
+    {
+      "relative_path": "reports/quality_check.md",
+      "category": "report",
+      "size_bytes": 1209,
+      "sha256": "f2bb57708f313614b874a04cb699816c42556724bc4b7ceb5fb2217d3b69a7aa"
+    },
+    {
+      "relative_path": "results/alignment_audit.tsv",
+      "category": "result",
+      "size_bytes": 1696,
+      "sha256": "dcfe3c948a9e27eea7c9d11e86956de0f9dd0e04add9cafb939674d763d6b780"
+    },
+    {
+      "relative_path": "results/case45_repair_rerun_guide.md",
+      "category": "result",
+      "size_bytes": 2298,
+      "sha256": "e0ec9806881e51183ad3e7415ffe130a8518ac46cb31391c1f0c70c76363e249"
+    },
+    {
+      "relative_path": "results/compute_l3_guide_rna_response_from_raw_cdna_optimized.json",
+      "category": "result",
+      "size_bytes": 5437,
+      "sha256": "bcc64d7cbee8a0feda6af059c46147d96cc6195bdea71cf9bae6b59ae6a8628b"
+    },
+    {
+      "relative_path": "results/compute_l3_guide_rna_response_from_raw_cdna_optimized.md",
+      "category": "result",
+      "size_bytes": 1920,
+      "sha256": "0103134a6d407ff64c1dcc68829bd8bfb1e3811e9161165356e552be89dffce4"
+    },
+    {
+      "relative_path": "results/demo_manifest.tsv",
+      "category": "result",
+      "size_bytes": 2124,
+      "sha256": "272f8ff3e101cca8626bb02f1f478ed62753a01cb2fcdd7d5e0b91dac061fc97"
+    },
+    {
+      "relative_path": "results/execution_events.jsonl",
+      "category": "result",
+      "size_bytes": 4896,
+      "sha256": "0d19fb5fe3474d29247ec24beb792abd30ff46431f56e2291bf390c82bf10945"
+    },
+    {
+      "relative_path": "results/execution_trace.md",
+      "category": "result",
+      "size_bytes": 4696,
+      "sha256": "f02c2271c8c4313a8a57c65abb92315ea8e331a2034a9da043617bfdd7456384"
+    },
+    {
+      "relative_path": "results/explore_structure.json",
+      "category": "result",
+      "size_bytes": 6017,
+      "sha256": "1bac4bd189a89381acfe6e9354223bf0acb9d02c72349032d04bacb3fbdbebb3"
+    },
+    {
+      "relative_path": "results/l3_measured_final_validation.json",
+      "category": "result",
+      "size_bytes": 1490,
+      "sha256": "77b7d567f4b5452f2c4defbfb62ec97cf90cd458482cfe88e99b324752737bac"
+    },
+    {
+      "relative_path": "results/l3_measured_final_validation.md",
+      "category": "result",
+      "size_bytes": 240,
+      "sha256": "e1d9e76f5734cf5913af6248072b18a712d8dfbc1f6d437ed8ca36f2e1944538"
+    },
+    {
+      "relative_path": "results/layer_coverage_summary.json",
+      "category": "result",
+      "size_bytes": 1424,
+      "sha256": "7e6fb562c39c1e67d59e6093ebd53227294097f26eb481439879881d31d0bda9"
+    },
+    {
+      "relative_path": "results/p0_case_contract_chunks/CASE_full.md",
+      "category": "result",
+      "size_bytes": 35624,
+      "sha256": "3a7a4f762619cb9bcf80eacb9bb791f59707bd52322e5dbcc58b6a6d11445f63"
+    },
+    {
+      "relative_path": "results/p0_case_contract_chunks/chunk_0000.md",
+      "category": "result",
+      "size_bytes": 3810,
+      "sha256": "7c4627839c871d231eeba028e3654ec9872095fab9bf0aa82f39d4fae86bc48e"
+    },
+    {
+      "relative_path": "results/p0_case_contract_chunks/chunk_0001.md",
+      "category": "result",
+      "size_bytes": 7707,
+      "sha256": "02eb5f33244d616419b6267e8cfd836bd7075145cf2fb334086840348bc883ed"
+    },
+    {
+      "relative_path": "results/p0_case_contract_chunks/chunk_0002.md",
+      "category": "result",
+      "size_bytes": 5497,
+      "sha256": "1472100f9a72732fa7e34b8d8843c115de8c04b79d6fc021290dd4cda3184e7f"
+    },
+    {
+      "relative_path": "results/p0_case_contract_chunks/chunk_0003.md",
+      "category": "result",
+      "size_bytes": 5519,
+      "sha256": "e4ab39fceb1b19e75111c329587d9eba562ecd08da39f8fda1c079227e481f47"
+    },
+    {
+      "relative_path": "results/p0_case_contract_chunks/chunk_0004.md",
+      "category": "result",
+      "size_bytes": 5617,
+      "sha256": "9900a4ffc412b880820f348b7eb488eddc4b5b13d40d8879f2f01067c8c041ba"
+    },
+    {
+      "relative_path": "results/p0_case_contract_chunks/chunk_0005.md",
+      "category": "result",
+      "size_bytes": 6897,
+      "sha256": "80d16b1917c6fcf12f531f2691b6117042ed21a184cd4154c01f1aff0f023db5"
+    },
+    {
+      "relative_path": "results/p0_case_contract_chunks/chunk_0006.md",
+      "category": "result",
+      "size_bytes": 571,
+      "sha256": "21ab6f4ca2ce4db6990b50dc9f74e99f6ca2648141df287c2451ff195c5cdb2d"
+    },
+    {
+      "relative_path": "results/p0_case_contract_chunks/manifest.json",
+      "category": "result",
+      "size_bytes": 2237,
+      "sha256": "03298ed45f038d455134efc71808e768e6b4009d67c993bc5cb7c65be0d195db"
+    },
+    {
+      "relative_path": "results/p2_candidate_counts.json",
+      "category": "result",
+      "size_bytes": 7943,
+      "sha256": "1907ae741d311a49c3abf78829e30272f20f86d857c9fe0880472d75aaf92f10"
+    },
+    {
+      "relative_path": "results/p3_l1.json",
+      "category": "result",
+      "size_bytes": 1211,
+      "sha256": "954dfcfdda3a25bc7f635de6f5ba070dcf13bee50b16d455cd21fa677c0e06ef"
+    },
+    {
+      "relative_path": "results/p3_l2.json",
+      "category": "result",
+      "size_bytes": 7391,
+      "sha256": "fdcbd552520531bec7b931ff85b4c1444396d68e24eef56921ad19d0e07dce00"
+    },
+    {
+      "relative_path": "results/p3_l5.json",
+      "category": "result",
+      "size_bytes": 1396,
+      "sha256": "8a83914411442f010cb5ab6354e219bc8b4156fa487e87988587f4bae4b3de9a"
+    },
+    {
+      "relative_path": "results/p7_analysis_figure_quality_check.json",
+      "category": "result",
+      "size_bytes": 1457,
+      "sha256": "18b4873322aa899f1b7054e5c36f7615975b9818470e654ed2ccb490ae0d85a1"
+    },
+    {
+      "relative_path": "results/p7_analysis_figure_quality_check.md",
+      "category": "result",
+      "size_bytes": 1508,
+      "sha256": "a4c0aa322e1c282e442ebd8b8f6184fd7112bed9514b2a962877acd0c074cd89"
+    },
+    {
+      "relative_path": "results/p7_blocker_inventory.json",
+      "category": "result",
+      "size_bytes": 12531,
+      "sha256": "1b03037e52f6ddbfd252dbaf35c4087bd17209f3fe8438d99183e99969c1ba19"
+    },
+    {
+      "relative_path": "results/p7_blocker_inventory.md",
+      "category": "result",
+      "size_bytes": 6332,
+      "sha256": "cd2c5e77239f0edbd04f22c51c7786bfcb558f3cd6a99eb13ec8d46f69376c7d"
+    },
+    {
+      "relative_path": "results/p7_input_table_quality_check.json",
+      "category": "result",
+      "size_bytes": 779,
+      "sha256": "5be0d1f65932486fe7bd57e1f18d125640127d23b2ee4feea3a023a4ce98f99e"
+    },
+    {
+      "relative_path": "results/p7_input_table_quality_check.md",
+      "category": "result",
+      "size_bytes": 300,
+      "sha256": "a5d7da2caadf79fdb6af627afd960ef6e3795ea09bb849c2a4e749ae28b53e41"
+    },
+    {
+      "relative_path": "results/p7_l5_parse_repair_summary.json",
+      "category": "result",
+      "size_bytes": 1029,
+      "sha256": "c0ce44eb94e19167da87683cd13ec641b73ea21f1ef3751ea49c378c7d019371"
+    },
+    {
+      "relative_path": "results/p7_l5_parse_repair_summary.md",
+      "category": "result",
+      "size_bytes": 480,
+      "sha256": "bbfa72fe5eaa956899f4632d792c211730034af04e18433392a7d3e7a5e055df"
+    },
+    {
+      "relative_path": "results/p7_step0_input_audit.json",
+      "category": "result",
+      "size_bytes": 16601,
+      "sha256": "dc53359e25fae13fdbadfce06d21368fcb8eaa330e130fd77853a2e7fdbcaa6c"
+    },
+    {
+      "relative_path": "results/p7_step0_input_audit.md",
+      "category": "result",
+      "size_bytes": 676,
+      "sha256": "d9cbcd4920c6791c7d15ad1991a7495445c28403a246656f03a8e4adea573119"
+    },
+    {
+      "relative_path": "results/p7_step0_status_audit.json",
+      "category": "result",
+      "size_bytes": 1081,
+      "sha256": "4e71905efd90c5703146eb9620592130d6d49d12ed779c8dc1a15432b4bf5a93"
+    },
+    {
+      "relative_path": "results/p7_step0_status_audit.md",
+      "category": "result",
+      "size_bytes": 995,
+      "sha256": "f633c8f4cdcf7a01e3ca52c869f20979fde44c075282515e9fa9bff935871ea5"
+    },
+    {
+      "relative_path": "results/phase_p0_environment.json",
+      "category": "result",
+      "size_bytes": 3929,
+      "sha256": "3a99b38ace6e5ac25c53a90884a43c729ae95af06bfca5a2404c82b27d0c288e"
+    },
+    {
+      "relative_path": "results/phase_p1_eccite_inputs.json",
+      "category": "result",
+      "size_bytes": 18089,
+      "sha256": "3fd1ada4660e44976ff33965050a9ba6a58d9751ae76dc03dc8f7c24870f40f6"
+    },
+    {
+      "relative_path": "results/phase_p1_eccite_inputs.md",
+      "category": "result",
+      "size_bytes": 2434,
+      "sha256": "92ef9e7fbd17c81d187589ef907be296f3f3fff27b9a7e0bdbe28a369a8ce940"
+    },
+    {
+      "relative_path": "results/phase_p2_subset_plan.json",
+      "category": "result",
+      "size_bytes": 10711,
+      "sha256": "9cb66b0d39ce45909965c981c4e2d84e3b5d46bb9cef855f5379107f8bb470ac"
+    },
+    {
+      "relative_path": "results/phase_p2_subset_plan.md",
+      "category": "result",
+      "size_bytes": 847,
+      "sha256": "ab6ec27a7c07426f6cec0dbc5e05dfb58be862cd5aec07837c9596304b2a7362"
+    },
+    {
+      "relative_path": "results/phase_p3_external_alignment.json",
+      "category": "result",
+      "size_bytes": 17577,
+      "sha256": "f73fb85e062cc0a7d66bb50f18f0c3c4197e26708033e54bdf54a180ddc32eac"
+    },
+    {
+      "relative_path": "results/phase_p3_external_alignment.md",
+      "category": "result",
+      "size_bytes": 158,
+      "sha256": "75244afafdbca20d977002a77a54d1247283f8007c351394ca140bd4ca864b26"
+    },
+    {
+      "relative_path": "results/phase_p4_atlas_construction.json",
+      "category": "result",
+      "size_bytes": 1594,
+      "sha256": "449c03875458f1c4e5a28ec4e3acc003ac4fbe2d35060b95d8d521dcafeb7868"
+    },
+    {
+      "relative_path": "results/phase_p4_atlas_construction.md",
+      "category": "result",
+      "size_bytes": 269,
+      "sha256": "c368f10b253cd7205e75f11aab1b5d231ae1f0b47c7756d0a256d126b573a384"
+    },
+    {
+      "relative_path": "results/phase_p4_l4_discovery.json",
+      "category": "result",
+      "size_bytes": 1412,
+      "sha256": "b2445325cacf5377f9ba990071573b6b1e118234620908913f30ca80bf413ddd"
+    },
+    {
+      "relative_path": "results/phase_p4_l4_discovery.md",
+      "category": "result",
+      "size_bytes": 319,
+      "sha256": "1572f5a408cf14f007685b903f6ff6202b54013cf898c15699daca91139468d7"
+    },
+    {
+      "relative_path": "results/phase_p4_l4_measured_repair.json",
+      "category": "result",
+      "size_bytes": 1279,
+      "sha256": "339cbbeb5b0291607fbac23f1b702097e0a015563bb77da35ad6481641cb60d7"
+    },
+    {
+      "relative_path": "results/phase_p4_l4_measured_repair.md",
+      "category": "result",
+      "size_bytes": 543,
+      "sha256": "2fd02b125f2a8ae17bb5f9896e7d1970893360943171a9c7ee373fce251344e4"
+    },
+    {
+      "relative_path": "results/phase_p5_quality_and_coverage.json",
+      "category": "result",
+      "size_bytes": 3592,
+      "sha256": "5cd54c4f94867e06fdb2af81a10d8b13d05bd4c517adb6d182ec48df01ca156a"
+    },
+    {
+      "relative_path": "results/phase_p5_quality_and_coverage.md",
+      "category": "result",
+      "size_bytes": 358,
+      "sha256": "151e85ad0dd06daa9ae1eca98f2e08903c20cf5eecdfa9cad238d0e268d04099"
+    },
+    {
+      "relative_path": "results/phase_p6_run_summary.json",
+      "category": "result",
+      "size_bytes": 3781,
+      "sha256": "3b7a670746b8d23cc5ac5916949c6a53ad70c447b3970c9760004b7b20d59b79"
+    },
+    {
+      "relative_path": "results/phase_p6_run_summary.md",
+      "category": "result",
+      "size_bytes": 149,
+      "sha256": "5b48d0f2fd18ea3d8e2b4bd6367a44fae7d580108e8d9221e19eadd7191a32d3"
+    },
+    {
+      "relative_path": "results/phase_p7_context_causal_summary.json",
+      "category": "result",
+      "size_bytes": 2230,
+      "sha256": "2ba68f97d09f8f1b3ad347845902698eac1be02f953fb0b2632ca73bb92a3fd8"
+    },
+    {
+      "relative_path": "results/phase_p7_context_causal_summary.md",
+      "category": "result",
+      "size_bytes": 345,
+      "sha256": "1f051f77346aba9aa2dd6a628795c96c47f1d4e95d4d41a535c9d8aa613f5f76"
+    },
+    {
+      "relative_path": "results/quality_gap_audit.json",
+      "category": "result",
+      "size_bytes": 1496,
+      "sha256": "502dd446c3a3e769a5f724db0efa6a946feed84de5b2525b0abd4c91affa30eb"
+    },
+    {
+      "relative_path": "results/quality_gap_audit.md",
+      "category": "result",
+      "size_bytes": 1474,
+      "sha256": "9ebb87a3f421fc927a268deb2e16d58034b6d5b06d280cfa67dbbfde361e723a"
+    },
+    {
+      "relative_path": "results/quality_gap_audit_CASE_full.md",
+      "category": "result",
+      "size_bytes": 37095,
+      "sha256": "c4a94f77482d6dd913cd861144bad0f6cfab031fc2d1a74c6498d474d6e5217d"
+    },
+    {
+      "relative_path": "results/quality_gap_audit_CASE_manifest.json",
+      "category": "result",
+      "size_bytes": 2151,
+      "sha256": "9cabbdbcb81f6cff14f455b2aee8a920caaa3552ad58cc2cf0b0a25f8af0eb34"
+    },
+    {
+      "relative_path": "results/quality_gap_audit_minimal_processed_contract.json",
+      "category": "result",
+      "size_bytes": 2041,
+      "sha256": "3c33b5682a8d2c31dd47ef4532cf9c7fe3fa073221bbdb038cf8b729a9c0e304"
+    },
+    {
+      "relative_path": "results/quality_gap_audit_minimal_processed_contract.md",
+      "category": "result",
+      "size_bytes": 909,
+      "sha256": "8fbdbdf2b51de0d5b395f445d78d88dbf61753e1a5c2c5ad32f10bfe7c935f30"
+    },
+    {
+      "relative_path": "results/quality_gap_audit_status_consistency.json",
+      "category": "result",
+      "size_bytes": 5480,
+      "sha256": "fb4fecb90c97af3676df4812c16f8065baa8bf6c701328bc0acd853b2da47c1f"
+    },
+    {
+      "relative_path": "results/quality_gap_audit_status_consistency.md",
+      "category": "result",
+      "size_bytes": 1164,
+      "sha256": "d6afad82d034384b3345282bf3a81554b33e5ed1021c498bff377d5503e6f783"
+    },
+    {
+      "relative_path": "results/run_summary.json",
+      "category": "result",
+      "size_bytes": 2163,
+      "sha256": "cf322fe53c7d66dcaacc6d477c9ca1ec8b6768ce30cf0d2356b7d9d14d69990d"
+    },
+    {
+      "relative_path": "results/run_summary_copy_for_inspect.json",
+      "category": "result",
+      "size_bytes": 1008,
+      "sha256": "387660520293b506d94c908d4f4969d4e9f68dac0a3b9715d0cb121998bc0d37"
+    },
+    {
+      "relative_path": "results/run_summary_structure.txt",
+      "category": "result",
+      "size_bytes": 498,
+      "sha256": "a89cd64eb5d56b315b8842e41515bdc772a3f3cad6768db3168f0722f95dc9bb"
+    },
+    {
+      "relative_path": "results/stage2_1_minimal_processed_inspection.json",
+      "category": "result",
+      "size_bytes": 1827,
+      "sha256": "c8f42494c2bae1a2d02ce30ef7e96fea518981a56f383cf5cbe3ac839a742ff2"
+    },
+    {
+      "relative_path": "results/stage2_1_minimal_processed_inspection.md",
+      "category": "result",
+      "size_bytes": 784,
+      "sha256": "d773d3a71fb7ce9f1b5ca91c92c6982c5b78fefc20bc867bd1337cbaedf91598"
+    },
+    {
+      "relative_path": "results/stage2_2a_manifest_cdna_summary.json",
+      "category": "result",
+      "size_bytes": 564,
+      "sha256": "fa641f0a605aacdfe76f1ce3f7f2bb06b9f21e7b7e940c5d078e0233429fa296"
+    },
+    {
+      "relative_path": "results/stage2_2a_manifest_cdna_summary.md",
+      "category": "result",
+      "size_bytes": 162,
+      "sha256": "943193ede68adc2132e63fc0977f019777493f32709a8a0f76ce756c829e4978"
+    },
+    {
+      "relative_path": "results/stage2_2b_l4_from_summary.json",
+      "category": "result",
+      "size_bytes": 174,
+      "sha256": "41a5e6b1ee2c5fcf92590467b26d4f58fb5c403da3449d8095e97df8b2ee4777"
+    },
+    {
+      "relative_path": "results/stage2_2b_l4_from_summary.md",
+      "category": "result",
+      "size_bytes": 114,
+      "sha256": "d2e879acc146826547be015d047fbec49a728ed5c54edc2dcdac87e0bac3555f"
+    },
+    {
+      "relative_path": "results/stage2_2b_l4_response.json",
+      "category": "result",
+      "size_bytes": 602,
+      "sha256": "933a5b08b3b37d5689ed8b0afd732fe92f5e023bee3f71ed2810108ff6c8fc1b"
+    },
+    {
+      "relative_path": "results/stage2_2b_l4_response.md",
+      "category": "result",
+      "size_bytes": 505,
+      "sha256": "96f07401deb65c4bcf994c6d943cf8f2e82b203ebe6cf6efdba545ac1c131747"
+    },
+    {
+      "relative_path": "results/stage2_2c_l3_response_or_blocker.json",
+      "category": "result",
+      "size_bytes": 332,
+      "sha256": "9e069e66dc372b1d228aac6c1d6cbfb813456e89e68efa2b19398cc1a0928c11"
+    },
+    {
+      "relative_path": "results/stage2_2c_l3_response_or_blocker.md",
+      "category": "result",
+      "size_bytes": 298,
+      "sha256": "a6d78a518917dca62c786416dac14bdbecd063454d2e3258a2a64a6e3dc9ccb2"
+    },
+    {
+      "relative_path": "results/stage3_1_schema_l4_metadata_repair.json",
+      "category": "result",
+      "size_bytes": 345,
+      "sha256": "19fcbccc7ad2083715aac6008163cc9f1d28c3696e06bf4da6f5b13157beedd4"
+    },
+    {
+      "relative_path": "results/stage3_1_schema_l4_metadata_repair.md",
+      "category": "result",
+      "size_bytes": 112,
+      "sha256": "f92a569c891efa0c3b5aa4b63c96b34cc51478805959505215cb3953c25144e3"
+    },
+    {
+      "relative_path": "results/stage3_2_alignment_audit_l4_repair.json",
+      "category": "result",
+      "size_bytes": 619,
+      "sha256": "9122e5b0b87fc80c9692942b61d0eb5866c7b25024d7889dbf3f29ebfce9caa7"
+    },
+    {
+      "relative_path": "results/stage3_2_alignment_audit_l4_repair.md",
+      "category": "result",
+      "size_bytes": 703,
+      "sha256": "e16566b11d25288615e39309ec05cd2df611cb211b4f6b3548f12d2a8fc7328e"
+    },
+    {
+      "relative_path": "results/stage3_3_closure_sync.json",
+      "category": "result",
+      "size_bytes": 1982,
+      "sha256": "0f93477ccd3032d36ea054730f9cbe5561e7d8e593919b6402d994719c73eb57"
+    },
+    {
+      "relative_path": "results/stage3_3_closure_sync.md",
+      "category": "result",
+      "size_bytes": 1797,
+      "sha256": "cdddfe1edfe3029887c649421633f7dabb4a6e8e4760172261d701dd220e46b9"
+    },
+    {
+      "relative_path": "results/stage3_3_deep_explore_output.txt",
+      "category": "result",
+      "size_bytes": 3784,
+      "sha256": "0146d552fc5049e7343ec44ee1cc8c23401914aa4120b084c52a73fcbfcdc797"
+    },
+    {
+      "relative_path": "results/stage3_3_explore_manifest.json",
+      "category": "result",
+      "size_bytes": 1444,
+      "sha256": "d836769935300cb20c2191cf35cd050ab3b902a564ba31b854fe01c9266f5bbc"
+    },
+    {
+      "relative_path": "results/stage3_3_run_summary_p7_repair.json",
+      "category": "result",
+      "size_bytes": 2432,
+      "sha256": "c09b11b4628227e188965cb7f60f7c268ac776252fff675777e3269d9bdac608"
+    },
+    {
+      "relative_path": "results/stage3_3_run_summary_p7_repair.md",
+      "category": "result",
+      "size_bytes": 1950,
+      "sha256": "092ef363fb53eeaa7fabc8f1e23a720c03c83285ebd78663541c49772529dbf7"
+    },
+    {
+      "relative_path": "results/stage3_3_sync_followup.json",
+      "category": "result",
+      "size_bytes": 2915,
+      "sha256": "2b8b36a295264ca711e9ca1975e78aa5abdd6319714a50b7c620138c0f924b1b"
+    },
+    {
+      "relative_path": "results/stage3_3_sync_followup.md",
+      "category": "result",
+      "size_bytes": 2207,
+      "sha256": "3b2c8446aa7f5ca7ab6abc020835849bfb090339e0b6af025c8dda9b8072ae45"
+    },
+    {
+      "relative_path": "results/stage3_4_blocker_fix.json",
+      "category": "result",
+      "size_bytes": 345,
+      "sha256": "04d6a95a605506514e1eedc6422267563dde9b941aa89c2e9a0fd1a9dfea22f1"
+    },
+    {
+      "relative_path": "results/stage3_4_blocker_fix.md",
+      "category": "result",
+      "size_bytes": 255,
+      "sha256": "e6f283980e2c248a9a16042c92cd4ceae14625707d9e06960370c58444923042"
+    },
+    {
+      "relative_path": "results/stage3_4_closure_audit.json",
+      "category": "result",
+      "size_bytes": 6160,
+      "sha256": "da1087f05cd9634d2bb6ac4828405c57e46cf38e54a19edb7d4b2ea388e6fe1e"
+    },
+    {
+      "relative_path": "results/stage3_4_closure_audit.md",
+      "category": "result",
+      "size_bytes": 2175,
+      "sha256": "49b788903ceefd3bb087283226e4cf2018c36a9cf9d2d7485da938161ecbd292"
+    },
+    {
+      "relative_path": "results/stage3_4_closure_min.json",
+      "category": "result",
+      "size_bytes": 2408,
+      "sha256": "052aadde63ec029103f3d8e0d8565eba16d652f179b0bbd1ce713463c7d45695"
+    },
+    {
+      "relative_path": "results/stage3_4_closure_min.md",
+      "category": "result",
+      "size_bytes": 2409,
+      "sha256": "b63f6bc9c90940a72fd673211ff54fc3cb3ce2508d655009641e0aced26bed3a"
+    },
+    {
+      "relative_path": "results/stage3_4_final_closure_audit.json",
+      "category": "result",
+      "size_bytes": 4535,
+      "sha256": "344e72a25bd83ddbbfc78928d645d00e87e8418b99ec2c599fcc98b9dadf5228"
+    },
+    {
+      "relative_path": "results/stage3_4_final_closure_audit.md",
+      "category": "result",
+      "size_bytes": 1700,
+      "sha256": "7748afcca6947680905e66adfcfa86f96ea4ad9026394c28a5d564e19b0e3882"
+    },
+    {
+      "relative_path": "results/stage3_4_manifest_json_repair.json",
+      "category": "result",
+      "size_bytes": 4428,
+      "sha256": "cd67297e328a9e450b5c74702e234e9d629a15a17fa07938f52f6ada4b445373"
+    },
+    {
+      "relative_path": "results/stage3_4_manifest_json_repair.md",
+      "category": "result",
+      "size_bytes": 103,
+      "sha256": "59b719c7ef01a6d9a7e4bc0c422d3e424c8a1a90bbf8b47fdf75a3164f862959"
+    },
+    {
+      "relative_path": "results/stage3_4_manifest_quality_provenance_recovery.json",
+      "category": "result",
+      "size_bytes": 8975,
+      "sha256": "6a3af5195102d59ba2167b02c054102f217639fd3e1e88f0e3276ae869cd9966"
+    },
+    {
+      "relative_path": "results/stage3_4_manifest_quality_provenance_recovery.md",
+      "category": "result",
+      "size_bytes": 292,
+      "sha256": "635cafaf3576ef935fcbc8228b5ba96f9dd66bf950b5e0fab6fa602dbd87cd53"
+    },
+    {
+      "relative_path": "results/stage3_4_manifest_quality_provenance_repair.json",
+      "category": "result",
+      "size_bytes": 2212,
+      "sha256": "c407018c60cd36e07279bc1aaa78018664c2a3b82241addce880b39c8d2da27b"
+    },
+    {
+      "relative_path": "results/stage3_4_manifest_quality_provenance_repair.md",
+      "category": "result",
+      "size_bytes": 1910,
+      "sha256": "4ea136e69ae0e7447c86b0776031173bd0ec93c42a835e5bcf62bb6db611d614"
+    },
+    {
+      "relative_path": "results/stage4_l3_blocker.json",
+      "category": "result",
+      "size_bytes": 1075,
+      "sha256": "1c8b279652dd9a057b07b2c558e38781f289c928a9c108be57f9fc2855054909"
+    },
+    {
+      "relative_path": "results/stage4_l3_blocker.md",
+      "category": "result",
+      "size_bytes": 481,
+      "sha256": "f652acd245290e97d4da2e18d36d46155e300aa18002e408232a1ad317ba3e68"
+    },
+    {
+      "relative_path": "results/stage4_l3_quality_assessment.json",
+      "category": "result",
+      "size_bytes": 393,
+      "sha256": "dddefd337c821c4da9fda05de7d239bfdf757246651d166576a740fa89db5f1c"
+    },
+    {
+      "relative_path": "results/stage4_l3_quality_assessment.md",
+      "category": "result",
+      "size_bytes": 284,
+      "sha256": "87d096641faf2196a573535716ebd8790a3acea97d2b5cd2ab99b48450eef0ab"
+    },
+    {
+      "relative_path": "results/stage5_script_inventory.json",
+      "category": "result",
+      "size_bytes": 49625,
+      "sha256": "199a5ebc2459bbfdb49a2abf1c284f121b91fbaa90eb5c6ea78d1809540bcd28"
+    },
+    {
+      "relative_path": "results/stage5_script_inventory.md",
+      "category": "result",
+      "size_bytes": 5958,
+      "sha256": "56341685d19e69b3277442a22bd77b33f0bd65262cb94d4cdc4b5e80f5818f89"
+    },
+    {
+      "relative_path": "results/stage6_artifact_structure_probe.json",
+      "category": "result",
+      "size_bytes": 6596,
+      "sha256": "5e8d1464aad84581ebef99eb0dc47aa8df92682ea8d917a39384c64390859828"
+    },
+    {
+      "relative_path": "results/stage6_final_quality_validation.json",
+      "category": "result",
+      "size_bytes": 1388,
+      "sha256": "5695b111d6c722bc4fda3b6725b786060b6143531049c1487712c7582a87bf11"
+    },
+    {
+      "relative_path": "results/stage6_final_quality_validation.md",
+      "category": "result",
+      "size_bytes": 605,
+      "sha256": "ed01bddb52fb8587e3bc71b7c4c0dae3d0db9d50ae6dbf2492ba76bebccf599e"
+    },
+    {
+      "relative_path": "results/stage6_p3_coverage_docs_probe.json",
+      "category": "result",
+      "size_bytes": 2327,
+      "sha256": "b7295b0e277c6f1c0c380339bc6764f9065a61bf1f5c1e1231df27ca49a411eb"
+    },
+    {
+      "relative_path": "results/static_cross_scale_conditions_l0_l5.jsonl",
+      "category": "result",
+      "size_bytes": 30169,
+      "sha256": "77224f37e50c898a1e64583dc57b8cb8930fbb781b1dfb44aec788d9d370f763"
+    },
+    {
+      "relative_path": "scripts/check_l3_optimized_background.py",
+      "category": "script",
+      "size_bytes": 1904,
+      "sha256": "727a26c46c09b474eae023c60c6aa52f5a324e77f8e6bb624f28c1212fb2f365"
+    },
+    {
+      "relative_path": "scripts/compute_l3_guide_rna_response_from_raw_cdna_optimized.py",
+      "category": "script",
+      "size_bytes": 28647,
+      "sha256": "0b9ecd725952bf112236b4f480b818854b6d4376485cd681ba6446e742eb03e5"
+    },
+    {
+      "relative_path": "scripts/inspect_l3_cell_id_formats.py",
+      "category": "script",
+      "size_bytes": 1019,
+      "sha256": "c15a73113ab30c9b7e1859b02502e4f53ae6b0236416f6760ee6eb016bdcfefd"
+    },
+    {
+      "relative_path": "scripts/launch_l3_optimized_background.py",
+      "category": "script",
+      "size_bytes": 1720,
+      "sha256": "4676649d879e0853cd0e452cf3079a3a5c8771e182b780cc734f87a3499ffe56"
+    },
+    {
+      "relative_path": "scripts/p0_case_audit.py",
+      "category": "script",
+      "size_bytes": 3097,
+      "sha256": "43e8392da05a6861a84c248cadc58edbc8ee2ea88d7c2a04a1291a99778851e1"
+    },
+    {
+      "relative_path": "scripts/p0_commit_push.py",
+      "category": "script",
+      "size_bytes": 1768,
+      "sha256": "5d5cd52450d47f812de09274352bd806846b105e4f4da68cda5d5b3ab4054587"
+    },
+    {
+      "relative_path": "scripts/p0_finalize.py",
+      "category": "script",
+      "size_bytes": 7323,
+      "sha256": "26f37c5d18ee8e42f646fca2a812b886f05390d0c08d7343bb7dfe004ea893b3"
+    },
+    {
+      "relative_path": "scripts/p0_inspect_env.py",
+      "category": "script",
+      "size_bytes": 537,
+      "sha256": "8ae5f3031c33b2856ebe035373b4d4ecd217beccecbf71c7636390589f5227f5"
+    },
+    {
+      "relative_path": "scripts/p0_readback.py",
+      "category": "script",
+      "size_bytes": 3383,
+      "sha256": "fa6bff73a239299a9344fd6b30936110c085ca90a982bff8464287f1ce83d042"
+    },
+    {
+      "relative_path": "scripts/p0_readback2.py",
+      "category": "script",
+      "size_bytes": 758,
+      "sha256": "77b144345e8062a56f2595b2991fc2bab04be9b07fefc2c7d47749590da0b53d"
+    },
+    {
+      "relative_path": "scripts/p0_repair_evidence.py",
+      "category": "script",
+      "size_bytes": 3062,
+      "sha256": "250c9cb168d711295bbcd8fd27d0bc9bdc1325d87a30d1dd7e79801a7f24bfc3"
+    },
+    {
+      "relative_path": "scripts/p1_candidate_fix.py",
+      "category": "script",
+      "size_bytes": 5760,
+      "sha256": "4453947cb8505d35b265be6ba18131cc8d9055a2f7852b7740481027d5904666"
+    },
+    {
+      "relative_path": "scripts/p1_consistency.py",
+      "category": "script",
+      "size_bytes": 5409,
+      "sha256": "5107adb0534e1f4df8124e3aa2bc3320637b7dc3414604d7ecf7a07dcc24f9fe"
+    },
+    {
+      "relative_path": "scripts/p1_eccite_inspect.py",
+      "category": "script",
+      "size_bytes": 9092,
+      "sha256": "f98b11649bc76487526dbff3fd0d2cd23186055761fdbf8ab92b3f40a63dc185"
+    },
+    {
+      "relative_path": "scripts/p1_repair.py",
+      "category": "script",
+      "size_bytes": 6842,
+      "sha256": "fe5b6f6f981a9ba86adb704bb44029b85c1b0698fea23a8336aaca2f54c49321"
+    },
+    {
+      "relative_path": "scripts/p2_count_guides.py",
+      "category": "script",
+      "size_bytes": 2357,
+      "sha256": "c66db300ae9d17eed73d8fa0f04737c190d3f00b480397128cead95468ff558f"
+    },
+    {
+      "relative_path": "scripts/p2_json_fix.py",
+      "category": "script",
+      "size_bytes": 1708,
+      "sha256": "7009f0d2a78dcd0bd3bfe7fb5232fa615d4218b68a0b8860097927deb7dde910"
+    },
+    {
+      "relative_path": "scripts/p2_write_plan.py",
+      "category": "script",
+      "size_bytes": 4837,
+      "sha256": "b5489435afae87fdb62611fc82e1b10b5a1c30bfecde3d111167786f715d7ffd"
+    },
+    {
+      "relative_path": "scripts/p3_audit_fix.py",
+      "category": "script",
+      "size_bytes": 2937,
+      "sha256": "fee175cc6fb5e5b1d4ce9926ea8877dae7c227b5914c0fa4f39ab2fef63bddac"
+    },
+    {
+      "relative_path": "scripts/p3_commit_self.py",
+      "category": "script",
+      "size_bytes": 492,
+      "sha256": "0c88ac5764a1f59a6414853bc6be8d39a010670e615817efb80db3aac418ecaa"
+    },
+    {
+      "relative_path": "scripts/p3_final.py",
+      "category": "script",
+      "size_bytes": 1162,
+      "sha256": "8cc29d075377d400b2bf0d55f97b1ee605e7d20696babd2c33495b9471c9a783"
+    },
+    {
+      "relative_path": "scripts/p3_inspect.py",
+      "category": "script",
+      "size_bytes": 650,
+      "sha256": "edd375a42b9cc974bd6d3b0047db0fc91d6499a6cdf7fca4755af8a04722e77c"
+    },
+    {
+      "relative_path": "scripts/p3_inspect2.py",
+      "category": "script",
+      "size_bytes": 1075,
+      "sha256": "326bc6f45799a5082bf404dfcc893129858cb7da9e13b101c4f61bd26c72ed69"
+    },
+    {
+      "relative_path": "scripts/p3_inspect3.py",
+      "category": "script",
+      "size_bytes": 1118,
+      "sha256": "41f84fb82b4a1b43c889f2186f09b80727831c7c97576b46b26ce83bfbbdf052"
+    },
+    {
+      "relative_path": "scripts/p3_l1_uniprot.py",
+      "category": "script",
+      "size_bytes": 1246,
+      "sha256": "75478cfea8fea565171d7250b5625696cb74ecd91964c243cedf1b1521da9bf7"
+    },
+    {
+      "relative_path": "scripts/p3_l2_reactome.py",
+      "category": "script",
+      "size_bytes": 1247,
+      "sha256": "c0fb19853911944b3d105e21b61453d66d9b0a63882d714e9b71552c7256c032"
+    },
+    {
+      "relative_path": "scripts/p3_l5_depmap.py",
+      "category": "script",
+      "size_bytes": 1681,
+      "sha256": "7e67281122c1ba446c6f34aa6bb322272d6dc2c24d535c1162492e639617a8a4"
+    },
+    {
+      "relative_path": "scripts/p3_merge_status.py",
+      "category": "script",
+      "size_bytes": 3026,
+      "sha256": "a5983474fe1732287ea3d2767c5297acc729c2e662bfb052dd14d5de8a877df6"
+    },
+    {
+      "relative_path": "scripts/p4_adt.py",
+      "category": "script",
+      "size_bytes": 3192,
+      "sha256": "b7c0f1dab108a64984d138d67922ab7d51d8fcaf15a435133cbb9cd2a40f2a49"
+    },
+    {
+      "relative_path": "scripts/p4_artifacts.py",
+      "category": "script",
+      "size_bytes": 2213,
+      "sha256": "87d577d8a92a80e57c7e4333050f676291ba3216d183829fdaacdb91b2df918d"
+    },
+    {
+      "relative_path": "scripts/p4_atlas_qc.py",
+      "category": "script",
+      "size_bytes": 2470,
+      "sha256": "38c9859206aa3934dcffc273e1f988d63d535ac331ad1447cbde1bb1c6782824"
+    },
+    {
+      "relative_path": "scripts/p4_correct_atlas.py",
+      "category": "script",
+      "size_bytes": 5624,
+      "sha256": "a4f61fc75f09b21475e72c19a55fc3c1b98ae115ad38f9ee1978b09250c7240a"
+    },
+    {
+      "relative_path": "scripts/p4_extract_l34.py",
+      "category": "script",
+      "size_bytes": 3698,
+      "sha256": "5e768935c29560e4644e42e29aff61d87c2f0b4a99345d76087c9442f8558a7c"
+    },
+    {
+      "relative_path": "scripts/p4_f.py",
+      "category": "script",
+      "size_bytes": 1785,
+      "sha256": "a848a01687bcbe7d19e22e99959e65b1762817cc9a0ef3cd6d18981daf5f2e94"
+    },
+    {
+      "relative_path": "scripts/p4_fix_tables.py",
+      "category": "script",
+      "size_bytes": 1228,
+      "sha256": "d83d52123a4f6d510cbcb3f21392c1c38ed01a0155d03fba67c45fac39ade151"
+    },
+    {
+      "relative_path": "scripts/p4_g.py",
+      "category": "script",
+      "size_bytes": 606,
+      "sha256": "2ed935583f3a132e9d4d3a3293ce38bc5cea3ff31a3bbe112871108e6a1ef5ac"
+    },
+    {
+      "relative_path": "scripts/p4_l4_discovery.py",
+      "category": "script",
+      "size_bytes": 4620,
+      "sha256": "168d1d517f682fc9696a17d41bc0889cae7c2f16c4ee8e516a2429bef8a3e1ef"
+    },
+    {
+      "relative_path": "scripts/p4_l4_finalize_fix.py",
+      "category": "script",
+      "size_bytes": 3239,
+      "sha256": "4398764d52e944603b77fe75fc23c528f8fb5ff3be7092e3d5d71c2f7ac16731"
+    },
+    {
+      "relative_path": "scripts/p4_l4_metadata_fix.py",
+      "category": "script",
+      "size_bytes": 3310,
+      "sha256": "e720a4891d594c47f3636a2bf71433a6df2310246da86abdf3ed0f0b36e526d7"
+    },
+    {
+      "relative_path": "scripts/p4_l4_metadata_fix2.py",
+      "category": "script",
+      "size_bytes": 1905,
+      "sha256": "7338a21a12ff869754b336b1797c7a740d66d2fcbfbf434a2a6e84c13b017cc7"
+    },
+    {
+      "relative_path": "scripts/p4_l4_metadata_fix3.py",
+      "category": "script",
+      "size_bytes": 1262,
+      "sha256": "7542e72c16ba2c0188cd3abc45c866fcb2f8ee5cadf63c124440d98ad76cd5db"
+    },
+    {
+      "relative_path": "scripts/p4_setup.py",
+      "category": "script",
+      "size_bytes": 2037,
+      "sha256": "91431e1f1cfdb28ced7ef943ea6b66d1f2a22d50ce23f4a25581fbb4baf4eb1f"
+    },
+    {
+      "relative_path": "scripts/p4_upd.py",
+      "category": "script",
+      "size_bytes": 1146,
+      "sha256": "2eb6f0a5c11ffd5a816f90917c00bac5404bf79a63b1915e64caa0d3b18a85af"
+    },
+    {
+      "relative_path": "scripts/p5_check.py",
+      "category": "script",
+      "size_bytes": 745,
+      "sha256": "2e7cfe36a828c1f28561b7a3272f5e4dc2c6e13930b66c368ae07626f9d41928"
+    },
+    {
+      "relative_path": "scripts/p5_correct.py",
+      "category": "script",
+      "size_bytes": 2735,
+      "sha256": "1be86d06ff64aeb0466f82e5094fc7b95bb3abdcd7bc3305b0496919e7b3a1cf"
+    },
+    {
+      "relative_path": "scripts/p5_correct2.py",
+      "category": "script",
+      "size_bytes": 3668,
+      "sha256": "70994ff0496b269ac3f68ead2f9220b87299cfa1770d8de3d54708b103d8d717"
+    },
+    {
+      "relative_path": "scripts/p5_cov.py",
+      "category": "script",
+      "size_bytes": 1940,
+      "sha256": "be53f36972dcb5f79d92acfb49b746ce4f3fe3eed42af34b6c1d6fdf4d2b5e80"
+    },
+    {
+      "relative_path": "scripts/p5_env.py",
+      "category": "script",
+      "size_bytes": 472,
+      "sha256": "f336ebcf8855770e03186ae4b29714070ad796380369f53bbace418f058eaecb"
+    },
+    {
+      "relative_path": "scripts/p5_fin.py",
+      "category": "script",
+      "size_bytes": 2732,
+      "sha256": "24d7bb79ee2d87839b29a1387a2a2779448a7a948c00b954620b620aab001543"
+    },
+    {
+      "relative_path": "scripts/p5_prov.py",
+      "category": "script",
+      "size_bytes": 1725,
+      "sha256": "02f5ac5595fa83e85dc06907b7754381ab22f97443ff31f17e3bb27e6aa5ec1a"
+    },
+    {
+      "relative_path": "scripts/p5_qual.py",
+      "category": "script",
+      "size_bytes": 1785,
+      "sha256": "a9cd3df0cd7deb88b43eb5a4dba04af0dc2302b26397c7517237556868e8a33b"
+    },
+    {
+      "relative_path": "scripts/p5_read_atlas.py",
+      "category": "script",
+      "size_bytes": 429,
+      "sha256": "1ea83e67426f1677e857784b4844ea945a9ba92837eda359381027993e81da76"
+    },
+    {
+      "relative_path": "scripts/p5_repair.py",
+      "category": "script",
+      "size_bytes": 5175,
+      "sha256": "d8cbcd8491375b9536f90a977ce63cbfb320120afa14a15a10ae960fc2a4697a"
+    },
+    {
+      "relative_path": "scripts/p6_build.py",
+      "category": "script",
+      "size_bytes": 1958,
+      "sha256": "5690ecc721a54bbc3bb93fc300c2d350add7001b87262e007c7ef9c187ed4338"
+    },
+    {
+      "relative_path": "scripts/p6_check.py",
+      "category": "script",
+      "size_bytes": 542,
+      "sha256": "30f8fe0de13bf85d6d586dea2d8016c6cfb667d861aadca1cbf14120bd56981b"
+    },
+    {
+      "relative_path": "scripts/p6_commit.py",
+      "category": "script",
+      "size_bytes": 841,
+      "sha256": "a6cde39ad517d2ad3b0867084f1113baf62f8ef8dcce87244eebb1895a70d354"
+    },
+    {
+      "relative_path": "scripts/p6_final.py",
+      "category": "script",
+      "size_bytes": 2378,
+      "sha256": "dc4de4d99331525a372c95f27f678b50ba6823a78de5d5da2b0b6ae66210703c"
+    },
+    {
+      "relative_path": "scripts/p6_finalize.py",
+      "category": "script",
+      "size_bytes": 4929,
+      "sha256": "a86a147b71856990d0a0973c1940e35b20a0fca48ef1793c81339eb1246454c9"
+    },
+    {
+      "relative_path": "scripts/p6_repair.py",
+      "category": "script",
+      "size_bytes": 2677,
+      "sha256": "72124b8cb01d9cab929b9fd4a06cd59e22cdb1bf0a348f0296faea91ee577f86"
+    },
+    {
+      "relative_path": "scripts/p6_validate.py",
+      "category": "script",
+      "size_bytes": 873,
+      "sha256": "d80e1e169fd8184c35a3c867d61e66a4f7fbbe707e6fad5a1fbd3cc6769460cd"
+    },
+    {
+      "relative_path": "scripts/p6r.py",
+      "category": "script",
+      "size_bytes": 1325,
+      "sha256": "0c648aec583b3c859626da45ea71afc33337192ca9623b95da53c058cbe80765"
+    },
+    {
+      "relative_path": "scripts/p6y.py",
+      "category": "script",
+      "size_bytes": 1301,
+      "sha256": "eaac969f29e37af80c47de0c04379888bc4c20997a60d07996908f8c6c18e4bb"
+    },
+    {
+      "relative_path": "scripts/p7_build_context_tables.py",
+      "category": "script",
+      "size_bytes": 10483,
+      "sha256": "ae4f441db01ec85c4c5cb5a9e045326040ddcb30587af325e525ae7b787dc4b8"
+    },
+    {
+      "relative_path": "scripts/p7_context_causal_analysis.py",
+      "category": "script",
+      "size_bytes": 9640,
+      "sha256": "6d57572fa058dc167b566847a20e748832f0d8ecaac3ef5562b1f58d26d140d4"
+    },
+    {
+      "relative_path": "scripts/p7_finalizer2.py",
+      "category": "script",
+      "size_bytes": 2273,
+      "sha256": "5cbe9ffe04573be1da47a2ea8bd9761c147fce9701a982996713050585cd066c"
+    },
+    {
+      "relative_path": "scripts/p7_l5_repair_summary.py",
+      "category": "script",
+      "size_bytes": 1703,
+      "sha256": "124ba2f350c85b61812c5f5fff1c7038e68412e5f14d8cb545818cf086499d3d"
+    },
+    {
+      "relative_path": "scripts/p7b_fix_control_classification.py",
+      "category": "script",
+      "size_bytes": 1459,
+      "sha256": "38e4b3419a0e2c9bb855951fc11c0a738cfdc134d7009e8740373bae551c6960"
+    },
+    {
+      "relative_path": "scripts/p7b_generate_final.py",
+      "category": "script",
+      "size_bytes": 12099,
+      "sha256": "080e4274fa65b93613b356b4c270bcb9ecec5cfebc0bc31c994dfe775d2a30ae"
+    },
+    {
+      "relative_path": "scripts/patch_l3_cdna_header_quotes.py",
+      "category": "script",
+      "size_bytes": 1356,
+      "sha256": "bca9f6d58313f1710f4b34c1aef99c1ebfe386ca2af71f5c8de2f45458eade8e"
+    },
+    {
+      "relative_path": "scripts/patch_l3_optimized_cell_normalization.py",
+      "category": "script",
+      "size_bytes": 8863,
+      "sha256": "feadd6cd9abfdbc5ca2288d3da02376a7ac5003b6537342ce2fa0c2342d4a14a"
+    },
+    {
+      "relative_path": "scripts/quality_repair_case45.py",
+      "category": "script",
+      "size_bytes": 38001,
+      "sha256": "e4836992e247828fa7c691ceba163fd08b7c4bb96d8fd79f55cfc1b1ecb48b01"
+    },
+    {
+      "relative_path": "scripts/stage1c_minimal_hard_gap_audit.py",
+      "category": "script",
+      "size_bytes": 10159,
+      "sha256": "3d53aa24a1fe9d10ea457a9921f82957919eff95d7bdea56c58a48448358ed64"
+    },
+    {
+      "relative_path": "scripts/stage1f_compact_hard_audit.py",
+      "category": "script",
+      "size_bytes": 7271,
+      "sha256": "7d88b217f3a11380bea525a244c3ce677db20954c494868ab66b6872d203b0ad"
+    },
+    {
+      "relative_path": "scripts/stage1f_git_sync.py",
+      "category": "script",
+      "size_bytes": 3126,
+      "sha256": "083334df41de13255cd15ad8704cd444db19a0d65ec5e1c39bfd91e5b511eea9"
+    },
+    {
+      "relative_path": "scripts/stage1h_minimal_processed_contract_audit.py",
+      "category": "script",
+      "size_bytes": 4822,
+      "sha256": "ecdad87e84e55cfb8bc121558adf15756afa0b8c32a1a3cef8378c5b19bea5d0"
+    },
+    {
+      "relative_path": "scripts/stage1i_status_consistency_audit.py",
+      "category": "script",
+      "size_bytes": 7966,
+      "sha256": "a7561167b5092b0c8402597384e509066013fd63b35294df53ab405ad2540a6a"
+    },
+    {
+      "relative_path": "scripts/stage2_2a_git_fix.py",
+      "category": "script",
+      "size_bytes": 1077,
+      "sha256": "d0c5c52ef331f918194474e91a01a99f5018b11ce53202a752976e1982b49dbd"
+    },
+    {
+      "relative_path": "scripts/stage2_2b_manifest_fix.py",
+      "category": "script",
+      "size_bytes": 2922,
+      "sha256": "a80988d3dc9ccd9684a98c6792ee77ddc4642131524fd59308b1c36f5424c6f9"
+    },
+    {
+      "relative_path": "scripts/stage3_1_schema_l4_repair.py",
+      "category": "script",
+      "size_bytes": 4954,
+      "sha256": "2517d79f8e11d446904643a3d0d6e857fe7d9eab60edc9c42b2a43dc27a0bcc8"
+    },
+    {
+      "relative_path": "scripts/stage3_2_alignment_audit_repair.py",
+      "category": "script",
+      "size_bytes": 3642,
+      "sha256": "a5f90f772b011a1a99c12614f2c5a2e2c1e4cfac6d0dd51642eb53bb034e4c71"
+    },
+    {
+      "relative_path": "scripts/stage3_2_git_commit.py",
+      "category": "script",
+      "size_bytes": 1286,
+      "sha256": "214c24c196062af49d06bf4edb75c588a86dbe83f4eaa56a2d2a139946105234"
+    },
+    {
+      "relative_path": "scripts/stage3_2_l3_blocked_repair.py",
+      "category": "script",
+      "size_bytes": 6438,
+      "sha256": "d8bc82ddfc115edbc2127c750e2695812ecba59f0337636c689b333969081ccb"
+    },
+    {
+      "relative_path": "scripts/stage3_3_cat_files.py",
+      "category": "script",
+      "size_bytes": 323,
+      "sha256": "cfb9ce9f171721fcf9e00d6122b53790f2939d1680a804940065061b4ddd2b40"
+    },
+    {
+      "relative_path": "scripts/stage3_3_closure_sync.py",
+      "category": "script",
+      "size_bytes": 7419,
+      "sha256": "d7e467e667c08827dfa3f26917bed8aa8ad9e7fe518bc57f57bb6d884710ad17"
+    },
+    {
+      "relative_path": "scripts/stage3_3_compact_read.py",
+      "category": "script",
+      "size_bytes": 749,
+      "sha256": "6d05a3e6c6de4f0753ce370029693a0187eefdce506a8af28f1b705e8a8b0985"
+    },
+    {
+      "relative_path": "scripts/stage3_3_deep_explore.py",
+      "category": "script",
+      "size_bytes": 1487,
+      "sha256": "0cb712b180decce4a7501060332425890b8a530ffd1a98a52fdaccf886ea9bad"
+    },
+    {
+      "relative_path": "scripts/stage3_3_deep_explore2.py",
+      "category": "script",
+      "size_bytes": 2742,
+      "sha256": "e82f847919101ba1e6ee349f4f68449b9f874e6bf867708f84a0c891bf934595"
+    },
+    {
+      "relative_path": "scripts/stage3_3_explore.py",
+      "category": "script",
+      "size_bytes": 3632,
+      "sha256": "5e50dfd54d2ba832b8a7bf61de78d3f64452410b426267f2fb74d6d7d969772a"
+    },
+    {
+      "relative_path": "scripts/stage3_3_final_verify.py",
+      "category": "script",
+      "size_bytes": 1306,
+      "sha256": "2626644456eacd853c37f587364f6467374bff253d63432a207562b4b56f2a9a"
+    },
+    {
+      "relative_path": "scripts/stage3_3_git_check.py",
+      "category": "script",
+      "size_bytes": 570,
+      "sha256": "0fe9b6eb020c3c530e3094153680b5d163d28bc3af53d2937e2648372bc07e0a"
+    },
+    {
+      "relative_path": "scripts/stage3_3_minimal.py",
+      "category": "script",
+      "size_bytes": 301,
+      "sha256": "be898e9ff2052c628dfc7f522e2a96aa621c264c47bd7330bee3467719215c61"
+    },
+    {
+      "relative_path": "scripts/stage3_3_push_check.py",
+      "category": "script",
+      "size_bytes": 498,
+      "sha256": "aa0cc01470a4b842c38049ff05652d78b4255a1aac176528eccef26045c5b58e"
+    },
+    {
+      "relative_path": "scripts/stage3_3_quick_status.py",
+      "category": "script",
+      "size_bytes": 805,
+      "sha256": "bbeef8727870de6f16f23693a30952783bc4db48199b5c9495d15db9b8ba64cf"
+    },
+    {
+      "relative_path": "scripts/stage3_3_read_followup.py",
+      "category": "script",
+      "size_bytes": 962,
+      "sha256": "5c8dd1733b8aefe93f67f30d675f7161594e4e86e9b78cc611bd23440eddb096"
+    },
+    {
+      "relative_path": "scripts/stage3_3_read_outputs.py",
+      "category": "script",
+      "size_bytes": 407,
+      "sha256": "3225d6ca3ffd6d3cc7f04b77af699ab310b115e15e43cafc863fbe1d3bf3e243"
+    },
+    {
+      "relative_path": "scripts/stage3_3_read_summary.py",
+      "category": "script",
+      "size_bytes": 950,
+      "sha256": "1ac5d951958c08a890be42d2f5643596dfbc312e5e55d130a0db2377d7ca9c66"
+    },
+    {
+      "relative_path": "scripts/stage3_3_run_summary_p7_repair.py",
+      "category": "script",
+      "size_bytes": 12387,
+      "sha256": "fc81739208aaab7509dd86db01b727cdaa7b10477872f2107391ec4733e4b97c"
+    },
+    {
+      "relative_path": "scripts/stage3_3_sync_followup.py",
+      "category": "script",
+      "size_bytes": 5108,
+      "sha256": "05827d37c18a09f2f56fe2ef07572b3bba043f985cbd326b460765564157123d"
+    },
+    {
+      "relative_path": "scripts/stage3_3_verify_and_commit.py",
+      "category": "script",
+      "size_bytes": 3596,
+      "sha256": "88b82b05a1e5f9fe5943f153c1076799edb46c402865f9d2a2497993fdf2091b"
+    },
+    {
+      "relative_path": "scripts/stage3_4_blocker_fix.py",
+      "category": "script",
+      "size_bytes": 4562,
+      "sha256": "f6d7f2cc88da1db4942a96ae0269d20824d1c967026e18adfbdf75a784216027"
+    },
+    {
+      "relative_path": "scripts/stage3_4_closure_audit.py",
+      "category": "script",
+      "size_bytes": 7002,
+      "sha256": "0fa132f968295dd41931261a3fc0c3d6dd3ab596a42b85e1a95c5773a2a55676"
+    },
+    {
+      "relative_path": "scripts/stage3_4_final_closure_audit.py",
+      "category": "script",
+      "size_bytes": 6530,
+      "sha256": "bc16081ce6070d340ac3e109488986da488ccb1708588ac18c27193d5fbc3880"
+    },
+    {
+      "relative_path": "scripts/stage3_4_manifest_json_repair.py",
+      "category": "script",
+      "size_bytes": 4622,
+      "sha256": "1d189896b50b0329000d79b64316c798c663aae9d4e67bd112c9ed67121c5560"
+    },
+    {
+      "relative_path": "scripts/stage3_4_manifest_quality_provenance_repair.py",
+      "category": "script",
+      "size_bytes": 13141,
+      "sha256": "cca504e0dd44c516e56778a519423bd34903625dd8ce24c2f79f1ad36185e909"
+    },
+    {
+      "relative_path": "scripts/stage3_4_single_recovery.py",
+      "category": "script",
+      "size_bytes": 4004,
+      "sha256": "f59a3919f52e12e5dc412fc9008a3b2b87f09789a3b624859b3b42c64a9d5770"
+    },
+    {
+      "relative_path": "scripts/stage4_l3_correction_retry.py",
+      "category": "script",
+      "size_bytes": 8278,
+      "sha256": "d6ed18c02038fd4762f6439fb423a912a9a77732e331a61a3f82e25a8ecdc4aa"
+    },
+    {
+      "relative_path": "scripts/stage4_l3_quality_assessment.py",
+      "category": "script",
+      "size_bytes": 12496,
+      "sha256": "167ef9e84eb312c3a0bb3d7bd9c14d8c5934e21ce59a24d77eed2fa949994da5"
+    },
+    {
+      "relative_path": "scripts/stage4_l3_quality_assessment_correction.py",
+      "category": "script",
+      "size_bytes": 13824,
+      "sha256": "c6447e35274a9dbdc5d9fce74a9ff99b17a84a15d44463aad89154e1b46707e7"
+    },
+    {
+      "relative_path": "scripts/stage5_minimal_reclassify.py",
+      "category": "script",
+      "size_bytes": 4239,
+      "sha256": "a774c7cef1607e6157fc2deaef9288d76f894288e779a900446d6b62df535433"
+    },
+    {
+      "relative_path": "scripts/stage5_minimal_reclassify_sync.py",
+      "category": "script",
+      "size_bytes": 1096,
+      "sha256": "141d94e42240a0b0eb290f2f3e3cb178a2c58a697a7ed9d573587ee72dc9f2a9"
+    },
+    {
+      "relative_path": "scripts/stage5_script_directory_quality.py",
+      "category": "script",
+      "size_bytes": 13293,
+      "sha256": "7ec7bcf025aa1617dff24ddb35bf5f357144c86913e85939b0a885849d4a7489"
+    },
+    {
+      "relative_path": "scripts/stage5_script_directory_quality_closure.py",
+      "category": "script",
+      "size_bytes": 8424,
+      "sha256": "6837440d03a8ba444d2ae5b3f7d84436e4fcc9e39066452d5ba8be01fa7467ec"
+    },
+    {
+      "relative_path": "scripts/stage6_artifact_structure_probe.py",
+      "category": "script",
+      "size_bytes": 6286,
+      "sha256": "ea58f4e94757f6113da39b29a649933ea2666c0cdbb5b73665381f64a2a4b9a9"
+    },
+    {
+      "relative_path": "scripts/stage6_final_quality_validation.py",
+      "category": "script",
+      "size_bytes": 11042,
+      "sha256": "b06b3598ae0300ed3c2f5270408f2ad93eb492fe8cdf9c8a3ce4ab8cb8cd5758"
+    },
+    {
+      "relative_path": "scripts/stage6_final_quality_validation_correction.py",
+      "category": "script",
+      "size_bytes": 7973,
+      "sha256": "62601a7643438870fe84caea00defc948095c743d44ab9068f88c2ace1f21b5b"
+    },
+    {
+      "relative_path": "scripts/stage6_final_validation_dataset_table_fix.py",
+      "category": "script",
+      "size_bytes": 8433,
+      "sha256": "90581bbc8d4b2f146e4d7365060be14ea89c210ac607ea5d7dff8c5c29548ac4"
+    },
+    {
+      "relative_path": "scripts/stage6_final_validation_pass_fix.py",
+      "category": "script",
+      "size_bytes": 10565,
+      "sha256": "d6eded9ae6748a1ed1c19212ce96f298006542bf0bf1db81e0b59b7919b2b591"
+    },
+    {
+      "relative_path": "scripts/stage6_p3_coverage_docs_probe.py",
+      "category": "script",
+      "size_bytes": 3720,
+      "sha256": "2251f05e685801ad73020858c6bc4bb1003c0f3d4e31ca9b59496d085e562165"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+guide_id	target_gene	class	evidence_source	L1_uniprot_id	L1_found	L2_found	L2_pathway_count	L3_status	L3_measured	L3_n_cells_guide	L3_n_cells_control	L3_top_gene_count	L4_status	L4_measured	L4_n_guide_cells	L4_n_control_cells	L4_strongest_marker	L4_strongest_delta_mean	L4_strongest_log2fc	L4_measured_marker_count	L5_depmap_score	L5_dependency_class	L5_found
+PDCD1LG2g1	PDCD1LG2	checkpoint	GSE153056_ECCITE_metadata.tsv.gz	Q9BQ51	True	True	7	measured	True	142	2142	12	measured	True	142	2386	PDL2	-18.14	-0.4468	4	-0.05710295457242001	weak_or_no_dependency	True
+PDCD1LG2g3	PDCD1LG2	checkpoint	GSE153056_ECCITE_metadata.tsv.gz	Q9BQ51	True	True	7	measured	True	263	2142	12	measured	True	263	2386	PDL2	-11.51	-0.267	4	-0.05710295457242001	weak_or_no_dependency	True
+PDCD1LG2g4	PDCD1LG2	checkpoint	GSE153056_ECCITE_metadata.tsv.gz	Q9BQ51	True	True	7	measured	True	136	2142	12	measured	True	136	2386	PDL2	-27.48	-0.7453	4	-0.05710295457242001	weak_or_no_dependency	True
+PDCD1LG2g2	PDCD1LG2	checkpoint	GSE153056_ECCITE_metadata.tsv.gz	Q9BQ51	True	True	7	measured	True	76	2142	12	measured	True	76	2386	PDL2	-27.78	-0.7559	4	-0.05710295457242001	weak_or_no_dependency	True
+STAT2g2	STAT2	JAK_STAT	GSE153056_ECCITE_metadata.tsv.gz	P52630	True	True	10	measured	True	266	2142	12	measured	True	266	2386	PDL1	-22.66	-0.1572	4	-0.013432515471498443	weak_or_no_dependency	True
+STAT1g2	STAT1	JAK_STAT	GSE153056_ECCITE_metadata.tsv.gz	P42224	True	True	10	measured	True	99	2142	12	measured	True	99	2386	PDL1	-119.42	-1.1333	4	0.00818492273149375	weak_or_no_dependency	True
+STAT3g4	STAT3	JAK_STAT	GSE153056_ECCITE_metadata.tsv.gz	P40763	True	True	10	measured	True	75	2142	12	measured	True	75	2386	PDL1	25.78	0.1603	4	-0.24854050157289842	moderate_dependency	True
+JAK2g2	JAK2	JAK_STAT	GSE153056_ECCITE_metadata.tsv.gz	O60674	True	True	10	measured	True	363	2142	12	measured	True	363	2386	PDL1	-125.76	-1.2278	4	0.11088756784340445	weak_or_no_dependency	True
+STAT5Ag2	STAT5A	JAK_STAT	GSE153056_ECCITE_metadata.tsv.gz	P42229	True	True	10	measured	True	157	2142	12	measured	True	157	2386	PDL1	6.56	0.0425	4	-0.13125921646002675	moderate_dependency	True
+JAK2g3	JAK2	JAK_STAT	GSE153056_ECCITE_metadata.tsv.gz	O60674	True	True	10	measured	True	173	2142	12	measured	True	173	2386	PDL1	-117.81	-1.1102	4	0.11088756784340445	weak_or_no_dependency	True
+STAT5Ag3	STAT5A	JAK_STAT	GSE153056_ECCITE_metadata.tsv.gz	P42229	True	True	10	measured	True	235	2142	12	measured	True	235	2386	CD86	3.86	0.0499	4	-0.13125921646002675	moderate_dependency	True
+STAT3g3	STAT3	JAK_STAT	GSE153056_ECCITE_metadata.tsv.gz	P40763	True	True	10	measured	True	208	2142	12	measured	True	208	2386	CD86	-18.34	-0.2642	4	-0.24854050157289842	moderate_dependency	True
+IRF7g2	IRF7	IFN_response	GSE153056_ECCITE_metadata.tsv.gz	Q92985	True	True	10	measured	True	165	2142	12	measured	True	165	2386	CD86	25.74	0.3044	4	0.04125745907674035	weak_or_no_dependency	True
+IFNGR1g4	IFNGR1	IFN_response	GSE153056_ECCITE_metadata.tsv.gz	P15260	True	True	10	measured	True	281	2142	12	measured	True	281	2386	PDL1	-102.87	-0.9125	4	0.04404516590410753	weak_or_no_dependency	True
+IRF1g2	IRF1	IFN_response	GSE153056_ECCITE_metadata.tsv.gz	P10914	True	True	10	measured	True	250	2142	12	measured	True	250	2386	PDL1	-37.39	-0.2695	4	0.10971463364635103	weak_or_no_dependency	True
+IFNGR1g2	IFNGR1	IFN_response	GSE153056_ECCITE_metadata.tsv.gz	P15260	True	True	10	measured	True	359	2142	12	measured	True	359	2386	PDL1	-60.24	-0.4629	4	0.04404516590410753	weak_or_no_dependency	True
+IFNGR1g3	IFNGR1	IFN_response	GSE153056_ECCITE_metadata.tsv.gz	P15260	True	True	10	measured	True	416	2142	12	measured	True	416	2386	PDL1	-138.53	-1.4391	4	0.04404516590410753	weak_or_no_dependency	True
+IRF1g1	IRF1	IFN_response	GSE153056_ECCITE_metadata.tsv.gz	P10914	True	True	10	measured	True	298	2142	12	measured	True	298	2386	CD86	15.53	0.1912	4	0.10971463364635103	weak_or_no_dependency	True
+IRF1g4	IRF1	IFN_response	GSE153056_ECCITE_metadata.tsv.gz	P10914	True	True	10	measured	True	329	2142	12	measured	True	329	2386	PDL1	-84.97	-0.7064	4	0.10971463364635103	weak_or_no_dependency	True
+IFNGR2g2	IFNGR2	IFN_response	GSE153056_ECCITE_metadata.tsv.gz	P38484	True	True	10	measured	True	397	2142	12	measured	True	397	2386	PDL1	-104.81	-0.9366	4	-0.09047028564024355	weak_or_no_dependency	True
+NFKBIAg1	NFKBIA	NF_kB	GSE153056_ECCITE_metadata.tsv.gz	P25963	True	True	10	measured	True	285	2142	12	measured	True	285	2386	PDL1	-7.08	-0.0473	4	-0.05842643789386051	weak_or_no_dependency	True
+NFKBIAg2	NFKBIA	NF_kB	GSE153056_ECCITE_metadata.tsv.gz	P25963	True	True	10	measured	True	282	2142	12	measured	True	282	2386	PDL1	33.43	0.2046	4	-0.05842643789386051	weak_or_no_dependency	True
+NFKBIAg3	NFKBIA	NF_kB	GSE153056_ECCITE_metadata.tsv.gz	P25963	True	True	10	measured	True	187	2142	12	measured	True	187	2386	PDL1	-11.52	-0.0778	4	-0.05842643789386051	weak_or_no_dependency	True
+NFKBIAg4	NFKBIA	NF_kB	GSE153056_ECCITE_metadata.tsv.gz	P25963	True	True	10	measured	True	33	2142	12	measured	True	33	2386	PDL1	54.86	0.3219	4	-0.05842643789386051	weak_or_no_dependency	True
+NTg1	NT	control	GSE153056_ECCITE_metadata.tsv.gz		False	False	0	control_reference	False	303	2142	12	measured	True	303	2386	PDL1	-2.22	-0.0146	4		missing	False
+NTg4	NT	control	GSE153056_ECCITE_metadata.tsv.gz		False	False	0	control_reference	False	431	2142	12	measured	True	431	2386	CD86	6.68	0.0853	4		missing	False
+NTg5	NT	control	GSE153056_ECCITE_metadata.tsv.gz		False	False	0	control_reference	False	305	2142	12	measured	True	305	2386	PDL1	-13.02	-0.0882	4		missing	False
+NTg8	NT	control	GSE153056_ECCITE_metadata.tsv.gz		False	False	0	control_reference	False	56	2142	12	measured	True	56	2386	PDL1	-28.59	-0.2014	4		missing	False
+NTg9	NT	control	GSE153056_ECCITE_metadata.tsv.gz		False	False	0	control_reference	False	261	2142	12	measured	True	261	2386	CD86	-4.13	-0.0554	4		missing	False
+NTg2	NT	control	GSE153056_ECCITE_metadata.tsv.gz		False	False	0	control_reference	False	106	2142	12	measured	True	106	2386	PDL1	19.55	0.1231	4		missing	False
+NTg10	NT	control	GSE153056_ECCITE_metadata.tsv.gz		False	False	0	control_reference	False	235	2142	12	measured	True	235	2386	CD86	11.48	0.1438	4		missing	False
+NTg7	NT	control	GSE153056_ECCITE_metadata.tsv.gz		False	False	0	control_reference	False	445	2142	12	measured	True	445	2386	CD86	-9.77	-0.1346	4		missing	False
+CAV1g4	CAV1	other	GSE153056_ECCITE_metadata.tsv.gz	Q03135	True	True	10	measured	True	134	2142	12	measured	True	134	2386	PDL1	-15.36	-0.1047	4	-0.043279498822540285	weak_or_no_dependency	True
+CD86g1	CD86	other	GSE153056_ECCITE_metadata.tsv.gz	P42081	True	True	10	measured	True	401	2142	12	measured	True	401	2386	CD86	-47.53	-0.8204	4	0.007494399011215035	weak_or_no_dependency	True
+ATF2g4	ATF2	other	GSE153056_ECCITE_metadata.tsv.gz	P15336	True	True	10	measured	True	283	2142	12	measured	True	283	2386	CD86	5.26	0.0676	4	0.043820691583985445	weak_or_no_dependency	True

@@ -1,0 +1,215 @@
+{
+  "stage": "stage06",
+  "status": "complete",
+  "timestamp": "2026-07-13T13:05:51Z",
+  "case": "case45-local-demo",
+  "summary": {
+    "total_artifacts": 22,
+    "datasets": 3,
+    "results": 6,
+    "figures": 4,
+    "scripts": 6,
+    "reports": 1,
+    "checklists": 2
+  },
+  "artifacts": [
+    {
+      "id": "dataset-001",
+      "category": "dataset",
+      "path": "run-output/datasets/case45_review_table.jsonl",
+      "description": "Case 4.5 review table (JSONL, 35 rows, 15 genes)",
+      "stage": "stage02",
+      "format": "jsonl",
+      "status": "present"
+    },
+    {
+      "id": "dataset-002",
+      "category": "dataset",
+      "path": "run-output/datasets/case45_review_table.tsv",
+      "description": "Case 4.5 review table (TSV, 35 rows, 15 genes)",
+      "stage": "stage02",
+      "format": "tsv",
+      "status": "present"
+    },
+    {
+      "id": "dataset-003",
+      "category": "dataset",
+      "path": "run-output/datasets/dataset_manifest.json",
+      "description": "Dataset manifest with stats and coverage",
+      "stage": "stage02",
+      "format": "json",
+      "status": "present"
+    },
+    {
+      "id": "result-001",
+      "category": "result",
+      "path": "run-output/results/source_inventory.json",
+      "description": "Source inventory (285 files, 815.0 MB)",
+      "stage": "stage01",
+      "format": "json",
+      "status": "present"
+    },
+    {
+      "id": "result-002",
+      "category": "result",
+      "path": "run-output/results/source_inventory.tsv",
+      "description": "Source inventory (TSV)",
+      "stage": "stage01",
+      "format": "tsv",
+      "status": "present"
+    },
+    {
+      "id": "result-003",
+      "category": "result",
+      "path": "run-output/results/quality_audit.json",
+      "description": "Quality audit (43 checks, 42 pass, 1 warn)",
+      "stage": "stage03",
+      "format": "json",
+      "status": "present"
+    },
+    {
+      "id": "result-004",
+      "category": "result",
+      "path": "run-output/results/quality_audit.tsv",
+      "description": "Quality audit (TSV)",
+      "stage": "stage03",
+      "format": "tsv",
+      "status": "present"
+    },
+    {
+      "id": "result-005",
+      "category": "result",
+      "path": "run-output/results/context_expansion_analysis.json",
+      "description": "Context expansion and causal-readiness analysis",
+      "stage": "stage04",
+      "format": "json",
+      "status": "present"
+    },
+    {
+      "id": "result-006",
+      "category": "result",
+      "path": "run-output/results/context_expansion_analysis.tsv",
+      "description": "Context expansion analysis (TSV)",
+      "stage": "stage04",
+      "format": "tsv",
+      "status": "present"
+    },
+    {
+      "id": "fig-1-layer-coverage",
+      "category": "figure",
+      "path": "run-output/figures/fig1_layer_coverage.png",
+      "description": "Figure fig1_layer_coverage.png (74.1 KB)",
+      "stage": "stage05",
+      "format": "png",
+      "status": "present"
+    },
+    {
+      "id": "fig-2-context-expansion-value",
+      "category": "figure",
+      "path": "run-output/figures/fig2_context_expansion_value.png",
+      "description": "Figure fig2_context_expansion_value.png (106.6 KB)",
+      "stage": "stage05",
+      "format": "png",
+      "status": "present"
+    },
+    {
+      "id": "fig-3-l3-l4-evidence",
+      "category": "figure",
+      "path": "run-output/figures/fig3_l3_l4_evidence.png",
+      "description": "Figure fig3_l3_l4_evidence.png (123.2 KB)",
+      "stage": "stage05",
+      "format": "png",
+      "status": "present"
+    },
+    {
+      "id": "fig-4-causal-readiness",
+      "category": "figure",
+      "path": "run-output/figures/fig4_causal_readiness.png",
+      "description": "Figure fig4_causal_readiness.png (154.5 KB)",
+      "stage": "stage05",
+      "format": "png",
+      "status": "present"
+    },
+    {
+      "id": "script-stage-01-source-inventory",
+      "category": "script",
+      "path": "run-output/scripts/stage01_source_inventory.py",
+      "description": "Stage script: stage01_source_inventory.py",
+      "stage": "stage01",
+      "format": "py",
+      "status": "present"
+    },
+    {
+      "id": "script-stage-02-reconstruct-dataset",
+      "category": "script",
+      "path": "run-output/scripts/stage02_reconstruct_dataset.py",
+      "description": "Stage script: stage02_reconstruct_dataset.py",
+      "stage": "stage02",
+      "format": "py",
+      "status": "present"
+    },
+    {
+      "id": "script-stage-03-quality-audit",
+      "category": "script",
+      "path": "run-output/scripts/stage03_quality_audit.py",
+      "description": "Stage script: stage03_quality_audit.py",
+      "stage": "stage03",
+      "format": "py",
+      "status": "present"
+    },
+    {
+      "id": "script-stage-04-context-expansion",
+      "category": "script",
+      "path": "run-output/scripts/stage04_context_expansion.py",
+      "description": "Stage script: stage04_context_expansion.py",
+      "stage": "stage04",
+      "format": "py",
+      "status": "present"
+    },
+    {
+      "id": "script-stage-05-generate-figures",
+      "category": "script",
+      "path": "run-output/scripts/stage05_generate_figures.py",
+      "description": "Stage script: stage05_generate_figures.py",
+      "stage": "stage05",
+      "format": "py",
+      "status": "present"
+    },
+    {
+      "id": "script-stage-06-write-report",
+      "category": "script",
+      "path": "run-output/scripts/stage06_write_report.py",
+      "description": "Stage script: stage06_write_report.py",
+      "stage": "stage06",
+      "format": "py",
+      "status": "present"
+    },
+    {
+      "id": "report-001",
+      "category": "report",
+      "path": "run-output/reports/case45_local_demo_report.md",
+      "description": "Final demo report (Stage 6)",
+      "stage": "stage06",
+      "format": "md",
+      "status": "present"
+    },
+    {
+      "id": "checklist-001",
+      "category": "checklist",
+      "path": "run-output/results/final_artifact_checklist.json",
+      "description": "Final artifact checklist (JSON)",
+      "stage": "stage06",
+      "format": "json",
+      "status": "present"
+    },
+    {
+      "id": "checklist-002",
+      "category": "checklist",
+      "path": "run-output/results/final_artifact_checklist.tsv",
+      "description": "Final artifact checklist (TSV)",
+      "stage": "stage06",
+      "format": "tsv",
+      "status": "present"
+    }
+  ]
+}

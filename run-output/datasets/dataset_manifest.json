@@ -1,0 +1,66 @@
+{
+  "dataset": "case45_review_table",
+  "stage": "stage02",
+  "source": "Reconstructed from L0-L5 source tables in case45_p0_20260708T1015Z",
+  "files": {
+    "jsonl": "cross-scale-bench/case45-local-demo/run-output/datasets/case45_review_table.jsonl",
+    "tsv": "cross-scale-bench/case45-local-demo/run-output/datasets/case45_review_table.tsv"
+  },
+  "stats": {
+    "total_rows": 35,
+    "unique_target_genes": 15,
+    "target_genes": [
+      "ATF2",
+      "CAV1",
+      "CD86",
+      "IFNGR1",
+      "IFNGR2",
+      "IRF1",
+      "IRF7",
+      "JAK2",
+      "NFKBIA",
+      "NT",
+      "PDCD1LG2",
+      "STAT1",
+      "STAT2",
+      "STAT3",
+      "STAT5A"
+    ],
+    "layer_coverage": {
+      "L0": {
+        "count": 35,
+        "coverage": 1.0
+      },
+      "L1": {
+        "count": 27,
+        "coverage": 0.7714
+      },
+      "L2": {
+        "count": 27,
+        "coverage": 0.7714
+      },
+      "L3": {
+        "count": 27,
+        "coverage": 0.7714,
+        "missing": 0,
+        "is_measured": true
+      },
+      "L4": {
+        "count": 35,
+        "coverage": 1.0,
+        "missing": 0,
+        "is_measured": true
+      },
+      "L5": {
+        "count": 27,
+        "coverage": 0.7714
+      }
+    }
+  },
+  "missingness_policy": {
+    "L3_missing": "Guides with status 'missing' or not found in L3 records have null L3 fields",
+    "L4_missing": "Guides with status 'missing' or not found in L4 records have null L4 fields",
+    "L1_L2_L5_missing": "Genes not found in annotation caches have found=False and null annotation fields",
+    "control_guides": "NT guides (class=control_reference) are included with measured L3/L4 but null L5 annotations"
+  }
+}

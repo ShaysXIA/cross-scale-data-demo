@@ -1,0 +1,102 @@
+section	subsection	metric	value	detail
+layer_value	L0_perturbation	description	CRISPR guide identity and target gene. The anchor of the dataset.	
+layer_value	L0_perturbation	unique_contribution	Defines the experimental perturbation; all other layers are responses to L0.	
+layer_value	L0_perturbation	rows_covered	35	
+layer_value	L0_perturbation	completeness	1.0	
+layer_value	L1_target	description	UniProt protein annotation of target genes.	
+layer_value	L1_target	unique_contribution	Links gene symbols to reviewed protein entries with functional domains, enabling protein-level queries and cross-database integration.	
+layer_value	L1_target	rows_covered	27	
+layer_value	L1_target	completeness	0.7714	
+layer_value	L2_pathway	description	Reactome/GO pathway membership of target proteins.	
+layer_value	L2_pathway	unique_contribution	Places individual perturbations into biological pathway context. Enables grouping by mechanism rather than gene family.	
+layer_value	L2_pathway	rows_covered	27	
+layer_value	L2_pathway	completeness	0.7714	
+layer_value	L3_RNA	description	scRNA-seq transcriptomic response to perturbation.	
+layer_value	L3_RNA	unique_contribution	Transcriptome-wide readout of perturbation effects. Identifies downstream genes and pathways affected by each perturbation.	
+layer_value	L3_RNA	rows_covered	35	
+layer_value	L3_RNA	completeness	1.0	
+layer_value	L4_ADT	description	ADT protein surface marker response to perturbation.	
+layer_value	L4_ADT	unique_contribution	Protein-level readout of immune checkpoint markers. Captures functional changes closer to phenotype than transcriptomics.	
+layer_value	L4_ADT	rows_covered	35	
+layer_value	L4_ADT	completeness	1.0	
+layer_value	L5_endpoint	description	DepMap/Achilles gene effect score in THP-1.	
+layer_value	L5_endpoint	unique_contribution	Disease-relevant fitness endpoint. Anchors molecular perturbations to a cancer dependency phenotype.	
+layer_value	L5_endpoint	rows_covered	27	
+layer_value	L5_endpoint	completeness	0.7714	
+l1_analysis		total_rows	35	
+l1_analysis		l1_found_count	27	
+l1_analysis		l1_found_rate	0.7714	
+l1_analysis		l1_unique_uniprot_ids	14	
+l1_analysis		l1_value	UniProt IDs provide reviewed protein-level annotation (accession, function, domains) that gene symbols alone cannot. This enables cross-reference with protein databases, structural biology, and drug-target resources.	
+l1_analysis		l1_limitation	All targets are human-reviewed Swiss-Prot entries; isoforms and PTMs are not captured here.	
+l2_analysis		l2_found_count	27	
+l2_analysis		l2_found_rate	0.7714	
+l2_analysis		l2_pathway_count_min	0	
+l2_analysis		l2_pathway_count_max	10	
+l2_analysis		l2_pathway_count_mean	7.37	
+l2_analysis		l2_zero_pathway_guides	8	
+l2_analysis		l2_unique_pathways	19	
+l2_analysis		l2_value	Reactome/GO pathways place individual gene perturbations into a mechanistic context. They reveal whether a perturbation targets a hub in signaling cascades (e.g., JAK-STAT, NF-kB, immune checkpoint) or a peripheral node. Pathway annotations enable grouping perturbations by biological process rather than by gene family alone.	
+l2_analysis		l2_limitation	Pathway annotations are curated human knowledge with varying granularity; top-level pathways (e.g., 'Immune System') are broad and less informative. Zero-pathway guides exist.	
+l3_analysis		l3_measured_perturbations	27	
+l3_analysis		l3_control_references	8	
+l3_analysis		l3_n_cells_guide_min	33	
+l3_analysis		l3_n_cells_guide_max	416	
+l3_analysis		l3_n_cells_guide_mean	233.1	
+l3_analysis		l3_n_cells_control_total	2142	
+l3_analysis		l3_top_gene_count_mean	12.0	
+l3_analysis		l3_recurrent_response_genes	[["CCL4", 18], ["IGFBP5", 10], ["CCL8", 9], ["CCL7", 9], ["IL18BP", 7], ["GBP5", 7], ["CXCL9", 7], ["FABP4", 6], ["C1QB", 6], ["CCL3", 6]]	
+l3_analysis		l3_value	scRNA-seq provides transcriptome-wide readout of perturbation effects. It captures both direct target gene knockdown and indirect transcriptional responses. The guide vs. control comparison identifies differentially expressed genes that may mediate the perturbation-to-phenotype path.	
+l3_analysis		l3_limitation	Single time point; dynamic responses missed. Cell counts vary per guide. Top-N gene lists may miss subtle but important changes.	
+l4_analysis		l4_measured_count	35	
+l4_analysis		l4_measured_rate	1.0	
+l4_analysis		l4_adt_markers_available	4	
+l4_analysis		l4_adt_markers	{"CD86": 35, "PDL1": 35, "PDL2": 35, "CD366": 35}	
+l4_analysis		l4_delta_mean_min	-138.53	
+l4_analysis		l4_delta_mean_max	54.86	
+l4_analysis		l4_delta_mean_mean	-34.38	
+l4_analysis		l4_log2fc_min	-1.4391	
+l4_analysis		l4_log2fc_max	0.3219	
+l4_analysis		l4_log2fc_mean	-0.3905	
+l4_analysis		l4_per_class_delta_mean	{"checkpoint": -21.23, "JAK_STAT": -45.97, "IFN_response": -60.94, "NF_kB": 17.42, "other": -19.21}	
+l4_analysis		l4_value	ADT protein measurements capture surface protein abundance changes, providing a functional readout closer to phenotype than transcriptomics. Markers include immune checkpoint proteins (PDL1, PDL2, CD86) directly relevant to the checkpoint biology under study. Protein-level changes may diverge from RNA due to post-transcriptional regulation.	
+l4_analysis		l4_limitation	Limited to 4 ADT markers (PDL1, PDL2, CD86, CD274). Does not capture intracellular protein changes or secreted factors.	
+l5_analysis		l5_found_count	27	
+l5_analysis		l5_found_rate	0.7714	
+l5_analysis		l5_missing_count	8	
+l5_analysis		l5_depmap_score_min	-0.2485	
+l5_analysis		l5_depmap_score_max	0.1109	
+l5_analysis		l5_depmap_score_mean	-0.0217	
+l5_analysis		l5_dependency_class_distribution	{"weak_or_no_dependency": 23, "moderate_dependency": 4, "missing": 8}	
+l5_analysis		l5_per_class_score_mean	{"checkpoint": -0.0571, "JAK_STAT": -0.0679, "IFN_response": 0.0515, "NF_kB": -0.0584, "other": 0.0027}	
+l5_analysis		l5_value	DepMap/Achilles gene effect scores provide a cancer-relevant endpoint phenotype in the matched THP-1 cell line. This anchors the molecular perturbation layers (L3, L4) to a disease-relevant fitness outcome. The score quantifies how essential each gene is for THP-1 proliferation/survival.	
+l5_analysis		l5_limitation	8 of 35 targets missing from DepMap. Scores reflect pooled CRISPR screen in a single cell line, not individual-level clinical outcome. Gene effect in THP-1 may not generalize to other AML contexts.	
+cross_layer	l3_l4	concordant_rate	1.0	L3 and L4 are concordant when both show measurable perturbation response. Divergence between RNA and protein levels may reflect post-transcriptional regulation, protein half-life differences, or ADT marker panel limitations.
+cross_layer	l3_l4	both_active	27	
+cross_layer	l3_l4	neither_active	0	
+cross_layer	l0_l5	moderate_dependency	4	Most perturbation targets show weak or no dependency in THP-1 DepMap. This suggests either (a) the perturbation effect is context-dependent and not captured by pooled CRISPR fitness screens, (b) the gene is not essential for THP-1 proliferation, or (c) the ECCITE-seq perturbation (single time point) does not translate to the long-term fitness endpoint measured by DepMap.
+cross_layer	l0_l5	weak_or_no_dependency	23	
+cross_layer	l0_l5	missing	0	
+causal_quality	treatment_definition	layer	L0	
+causal_quality	treatment_definition	source	GSE153056 ECCITE-seq CRISPR guide metadata	
+causal_quality	treatment_definition	quality	well-defined	
+causal_quality	treatment_definition	details	Each guide targets a specific gene via CRISPR interference. Guide identity is confirmed by sgRNA barcode. 35 guides targeting genes in checkpoint, JAK-STAT, IFN-response, NF-kB, and control classes.	
+causal_quality	treatment_definition	concerns	3	["Guide efficiency varies across targets; no on-target cleavage validation data included.", "Off-target effects are not quantified in this dataset.", "Single guide per target; no independent replicates with different sgRNAs."]
+causal_quality	outcome_definition	layer	L5	
+causal_quality	outcome_definition	source	DepMap/Achilles CRISPR GeneEffect (THP-1, ACH-000146)	
+causal_quality	outcome_definition	quality	moderate	
+causal_quality	outcome_definition	details	DepMap gene effect score represents the dependency of THP-1 cell proliferation on each gene, measured via pooled CRISPR screen. Score < -0.5 = strong dependency, -0.5 to -0.1 = moderate, > -0.1 = weak or no dependency.	
+causal_quality	outcome_definition	concerns	4	["8 of 35 targets (22.9%) missing from DepMap; cannot assess endpoint for these genes.", "Pooled CRISPR screen outcome is a population-level fitness measure, not individual-cell phenotype.", "Single cell line (THP-1); generalizability to other AML subtypes or primary cells is unknown.", "Gene effect score is a composite across multiple sgRNAs; may mask heterogeneous effects."]
+causal_quality	mediator_layers/L3_RNA	layer	L3	
+causal_quality	mediator_layers/L3_RNA	type	transcriptomic mediator	
+causal_quality	mediator_layers/L3_RNA	measurement	scRNA-seq differential expression (guide vs control)	
+causal_quality	mediator_layers/L3_RNA	quality	well-defined	
+causal_quality	mediator_layers/L3_RNA	concerns	['Single time point post-perturbation; temporal dynamics unknown.', 'Top-12 genes per guide may miss indirect downstream mediators.', 'Cell counts vary across guides (min 142, max varies); statistical power uneven.']	
+causal_quality	mediator_layers/L4_ADT	layer	L4	
+causal_quality	mediator_layers/L4_ADT	type	protein surface marker mediator	
+causal_quality	mediator_layers/L4_ADT	measurement	ADT (antibody-derived tag) protein abundance	
+causal_quality	mediator_layers/L4_ADT	quality	moderate	
+causal_quality	mediator_layers/L4_ADT	concerns	['Only 4 ADT markers (PDL1, PDL2, CD86, CD274); limited proteomic coverage.', 'Surface proteins only; intracellular signaling proteins not captured.', 'ADT signal may be affected by antibody binding competition or epitope masking.']	
+causal_quality	causal_claim_support	supported_claims	4	["Descriptive: Gene X perturbation in THP-1 is associated with RNA expression changes in genes A, B, C.", "Descriptive: Gene X perturbation alters surface protein abundance of immune checkpoint markers.", "Associative: Genes with stronger L4 ADT response tend to have different L5 DepMap scores.", "Hypothesis-generating: Targets with large L3/L4 responses and moderate L5 dependency are candidates for functional validation."]
+causal_quality	causal_claim_support	unsupported_claims	4	["Causal: Perturbation of gene X causes DepMap dependency via L3/L4 molecular mediators.", "Mediation: The effect of L0 perturbation on L5 phenotype is mediated through L3 RNA changes.", "Generalizable: Findings in THP-1 apply to other AML contexts or primary patient samples.", "Clinical: Gene X is a therapeutic target in AML."]
+causal_quality	causal_claim_support	overall_assessment	The dataset supports hypothesis generation and associative analysis. It does NOT support causal claims due to: (1) single time point, (2) lack of mediation analysis design, (3) temporal mismatch between L3/L4 (acute) and L5 (chronic), (4) single cell line, (5) small N (35 guides). The data is best used to nominate targets for follow-up validation with orthogonal methods (e.g., time-course, independent cell lines, in vivo models).	

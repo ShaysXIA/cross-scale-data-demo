@@ -1,0 +1,385 @@
+{
+  "stage": "stage03",
+  "status": "PASS",
+  "timestamp": "2026-07-13T12:36:32.844465+00:00",
+  "dataset": "case45_review_table",
+  "dataset_rows": 35,
+  "checks_run": 43,
+  "severity_summary": {
+    "pass": 42,
+    "warn": 1
+  },
+  "findings": [
+    {
+      "check": "traceability_l0",
+      "severity": "pass",
+      "detail": "All 35 review guide_ids present in L0 source"
+    },
+    {
+      "check": "traceability_l0_fields",
+      "severity": "pass",
+      "detail": "All guide_id->(target_gene, class) match L0 source"
+    },
+    {
+      "check": "traceability_l1",
+      "severity": "pass",
+      "detail": "All L1 Uniprot fields traceable to source"
+    },
+    {
+      "check": "traceability_l2",
+      "severity": "pass",
+      "detail": "All L2 Reactome fields traceable to source"
+    },
+    {
+      "check": "traceability_l3",
+      "severity": "pass",
+      "detail": "All L3 RNA fields traceable to source"
+    },
+    {
+      "check": "traceability_l4",
+      "severity": "pass",
+      "detail": "All L4 ADT fields traceable to source"
+    },
+    {
+      "check": "traceability_l5",
+      "severity": "pass",
+      "detail": "All L5 DepMap fields traceable to source"
+    },
+    {
+      "check": "l3_status_distribution",
+      "severity": "pass",
+      "detail": "L3 status: measured=27 missing=0 (non-NT measured=27/35, NT measured=0/0)"
+    },
+    {
+      "check": "l4_status_distribution",
+      "severity": "pass",
+      "detail": "L4 status: measured=35 missing=0"
+    },
+    {
+      "check": "l3_measured_consistency",
+      "severity": "pass",
+      "detail": "L3_measured field consistent with L3_status"
+    },
+    {
+      "check": "l4_measured_consistency",
+      "severity": "pass",
+      "detail": "L4_measured field consistent with L4_status"
+    },
+    {
+      "check": "l3_cell_counts",
+      "severity": "pass",
+      "detail": "All L3 cell counts are positive"
+    },
+    {
+      "check": "l4_cell_counts",
+      "severity": "pass",
+      "detail": "All L4 cell counts are positive"
+    },
+    {
+      "check": "stale_source_files",
+      "severity": "pass",
+      "detail": "All source files modified within 30 days"
+    },
+    {
+      "check": "schema_version",
+      "severity": "pass",
+      "detail": "Schema version: 1.0"
+    },
+    {
+      "check": "run_id",
+      "severity": "pass",
+      "detail": "L3 run_id: case45_p0_20260708T1015Z"
+    },
+    {
+      "check": "l4_phase",
+      "severity": "pass",
+      "detail": "L4 phase: P4"
+    },
+    {
+      "check": "missingness_required",
+      "severity": "pass",
+      "detail": "All required fields non-null for all rows"
+    },
+    {
+      "check": "missingness_non_nt_l3",
+      "severity": "pass",
+      "detail": "All non-NT guides have L3 measured"
+    },
+    {
+      "check": "missingness_non_nt_l4",
+      "severity": "pass",
+      "detail": "All non-NT guides have L4 measured"
+    },
+    {
+      "check": "missingness_nt_l5",
+      "severity": "pass",
+      "detail": "NT guides correctly have null L5 annotations"
+    },
+    {
+      "check": "missingness_high_rate",
+      "severity": "pass",
+      "detail": "No fields with >50% missingness"
+    },
+    {
+      "check": "schema_expected_fields",
+      "severity": "pass",
+      "detail": "All 27 expected fields present"
+    },
+    {
+      "check": "schema_extra_fields",
+      "severity": "pass",
+      "detail": "Extra fields present but documented: ['L3_source_file']"
+    },
+    {
+      "check": "schema_types",
+      "severity": "pass",
+      "detail": "All field types match expected schema"
+    },
+    {
+      "check": "schema_class_values",
+      "severity": "pass",
+      "detail": "All class values in ['IFN_response', 'JAK_STAT', 'NF_kB', 'checkpoint', 'control', 'control_reference', 'other']"
+    },
+    {
+      "check": "schema_l3_status_values",
+      "severity": "pass",
+      "detail": "All L3_status values valid"
+    },
+    {
+      "check": "schema_l4_status_values",
+      "severity": "pass",
+      "detail": "All L4_status values valid"
+    },
+    {
+      "check": "schema_jsonl_tsv_consistency",
+      "severity": "pass",
+      "detail": "JSONL and TSV both have 35 rows"
+    },
+    {
+      "check": "leakage_duplicate_guides",
+      "severity": "pass",
+      "detail": "No duplicate guide_ids"
+    },
+    {
+      "check": "leakage_gene_guides",
+      "severity": "pass",
+      "detail": "15 unique genes across 35 guides (avg 2.3 guides/gene)"
+    },
+    {
+      "check": "leakage_control_labeling",
+      "severity": "pass",
+      "detail": "All control guides have target_gene=NT"
+    },
+    {
+      "check": "leakage_l3_control_pool",
+      "severity": "pass",
+      "detail": "All L3 measured guides share same control pool (2142 cells)"
+    },
+    {
+      "check": "leakage_l4_control_pool",
+      "severity": "pass",
+      "detail": "All L4 measured guides share same control pool (2386 cells)"
+    },
+    {
+      "check": "leakage_l3_top_genes",
+      "severity": "pass",
+      "detail": "L3 top response genes vary across guides (expected)"
+    },
+    {
+      "check": "leakage_target_in_top",
+      "severity": "warn",
+      "detail": "2 guides have their target gene in L3 top response genes (potential on-target effect, not necessarily leakage)"
+    },
+    {
+      "check": "repro_scripts_exist",
+      "severity": "pass",
+      "detail": "Stage 1 and Stage 2 scripts exist"
+    },
+    {
+      "check": "repro_stage01_abs_paths",
+      "severity": "pass",
+      "detail": "stage01 script uses only relative paths"
+    },
+    {
+      "check": "repro_stage02_abs_paths",
+      "severity": "pass",
+      "detail": "stage02 script uses only relative paths"
+    },
+    {
+      "check": "repro_outputs_exist",
+      "severity": "pass",
+      "detail": "All required Stage 1-2 output files present"
+    },
+    {
+      "check": "repro_row_count",
+      "severity": "pass",
+      "detail": "Review table: JSONL=35 rows, TSV=35 rows, manifest_total=35"
+    },
+    {
+      "check": "repro_data_hash",
+      "severity": "pass",
+      "detail": "JSONL SHA256: 6aeb8bed0f0f6054..."
+    },
+    {
+      "check": "repro_source_hashes",
+      "severity": "pass",
+      "detail": "Source file hashes recorded for 7 files"
+    }
+  ],
+  "source_hashes": {
+    "l0_perturbation.json": "4fe92a7e9919e38f3c1950cacb0bd197b4937cfef407ef1215269099273edaaf",
+    "l1_uniprot.json": "962f50771027257581c1a480df6036aacc63e52b76fb93d2cbfa9ab2dc133e44",
+    "l2_reactome.json": "6b0374a0ac8b587653ed3694cab47d79de93644c73edc0bdcf0881038356c963",
+    "l3_guide_rna_response.json": "e99502a13461bf0f7c51fc908001b00eea53f0e59f89a590c3232ac4e720805f",
+    "l3_rna_summary.json": "ea96d483d1849239b31ca6dc020d75a85b3d537c31566f6d997d98d9cb8942e7",
+    "l4_adt_summary.json": "7546e744ccbc79940aa3ad9d22c2d69cb4b6827cf63e100a9dab980b42deb279",
+    "l5_depmap.json": "270b2ebbf7f6af29b42149236fb6b5b7335cc8997aba26497b2304fb48ebbcf1"
+  },
+  "source_mtimes": {
+    "l0_perturbation.json": "2026-07-08T11:36:03+00:00",
+    "l1_uniprot.json": "2026-07-08T11:46:34+00:00",
+    "l2_reactome.json": "2026-07-08T11:46:34+00:00",
+    "l3_guide_rna_response.json": "2026-07-09T10:24:04+00:00",
+    "l3_rna_summary.json": "2026-07-09T10:24:04+00:00",
+    "l4_adt_summary.json": "2026-07-08T13:08:46+00:00",
+    "l5_depmap.json": "2026-07-08T11:46:34+00:00"
+  },
+  "missingness": {
+    "guide_id": {
+      "null": 0,
+      "non_null": 35,
+      "null_rate": 0.0
+    },
+    "target_gene": {
+      "null": 0,
+      "non_null": 35,
+      "null_rate": 0.0
+    },
+    "class": {
+      "null": 0,
+      "non_null": 35,
+      "null_rate": 0.0
+    },
+    "evidence_source": {
+      "null": 0,
+      "non_null": 35,
+      "null_rate": 0.0
+    },
+    "L1_uniprot_id": {
+      "null": 0,
+      "non_null": 35,
+      "null_rate": 0.0
+    },
+    "L1_found": {
+      "null": 0,
+      "non_null": 35,
+      "null_rate": 0.0
+    },
+    "L2_pathway_count": {
+      "null": 0,
+      "non_null": 35,
+      "null_rate": 0.0
+    },
+    "L2_top_pathways": {
+      "null": 0,
+      "non_null": 35,
+      "null_rate": 0.0
+    },
+    "L2_found": {
+      "null": 0,
+      "non_null": 35,
+      "null_rate": 0.0
+    },
+    "L3_status": {
+      "null": 0,
+      "non_null": 35,
+      "null_rate": 0.0
+    },
+    "L3_measured": {
+      "null": 0,
+      "non_null": 35,
+      "null_rate": 0.0
+    },
+    "L3_n_cells_guide": {
+      "null": 0,
+      "non_null": 35,
+      "null_rate": 0.0
+    },
+    "L3_n_cells_control": {
+      "null": 0,
+      "non_null": 35,
+      "null_rate": 0.0
+    },
+    "L3_top_gene_count": {
+      "null": 0,
+      "non_null": 35,
+      "null_rate": 0.0
+    },
+    "L3_top_response_genes": {
+      "null": 0,
+      "non_null": 35,
+      "null_rate": 0.0
+    },
+    "L4_status": {
+      "null": 0,
+      "non_null": 35,
+      "null_rate": 0.0
+    },
+    "L4_measured": {
+      "null": 0,
+      "non_null": 35,
+      "null_rate": 0.0
+    },
+    "L4_n_guide_cells": {
+      "null": 0,
+      "non_null": 35,
+      "null_rate": 0.0
+    },
+    "L4_n_control_cells": {
+      "null": 0,
+      "non_null": 35,
+      "null_rate": 0.0
+    },
+    "L4_strongest_marker": {
+      "null": 0,
+      "non_null": 35,
+      "null_rate": 0.0
+    },
+    "L4_strongest_delta_mean": {
+      "null": 0,
+      "non_null": 35,
+      "null_rate": 0.0
+    },
+    "L4_strongest_log2fc": {
+      "null": 0,
+      "non_null": 35,
+      "null_rate": 0.0
+    },
+    "L4_markers": {
+      "null": 0,
+      "non_null": 35,
+      "null_rate": 0.0
+    },
+    "L4_measured_marker_count": {
+      "null": 0,
+      "non_null": 35,
+      "null_rate": 0.0
+    },
+    "L5_depmap_score": {
+      "null": 8,
+      "non_null": 27,
+      "null_rate": 0.22857142857142856
+    },
+    "L5_dependency_class": {
+      "null": 0,
+      "non_null": 35,
+      "null_rate": 0.0
+    },
+    "L5_found": {
+      "null": 0,
+      "non_null": 35,
+      "null_rate": 0.0
+    }
+  },
+  "jsonl_hash": "6aeb8bed0f0f605400a59ca488a36114b7758f4c76766427af51c9c9c65924d1"
+}

@@ -1,0 +1,23 @@
+id	category	path	description	stage	format	status
+dataset-001	dataset	run-output/datasets/case45_review_table.jsonl	Case 4.5 review table (JSONL, 35 rows, 15 genes)	stage02	jsonl	present
+dataset-002	dataset	run-output/datasets/case45_review_table.tsv	Case 4.5 review table (TSV, 35 rows, 15 genes)	stage02	tsv	present
+dataset-003	dataset	run-output/datasets/dataset_manifest.json	Dataset manifest with stats and coverage	stage02	json	present
+result-001	result	run-output/results/source_inventory.json	Source inventory (285 files, 815.0 MB)	stage01	json	present
+result-002	result	run-output/results/source_inventory.tsv	Source inventory (TSV)	stage01	tsv	present
+result-003	result	run-output/results/quality_audit.json	Quality audit (43 checks, 42 pass, 1 warn)	stage03	json	present
+result-004	result	run-output/results/quality_audit.tsv	Quality audit (TSV)	stage03	tsv	present
+result-005	result	run-output/results/context_expansion_analysis.json	Context expansion and causal-readiness analysis	stage04	json	present
+result-006	result	run-output/results/context_expansion_analysis.tsv	Context expansion analysis (TSV)	stage04	tsv	present
+fig-1-layer-coverage	figure	run-output/figures/fig1_layer_coverage.png	Figure fig1_layer_coverage.png (74.1 KB)	stage05	png	present
+fig-2-context-expansion-value	figure	run-output/figures/fig2_context_expansion_value.png	Figure fig2_context_expansion_value.png (106.6 KB)	stage05	png	present
+fig-3-l3-l4-evidence	figure	run-output/figures/fig3_l3_l4_evidence.png	Figure fig3_l3_l4_evidence.png (123.2 KB)	stage05	png	present
+fig-4-causal-readiness	figure	run-output/figures/fig4_causal_readiness.png	Figure fig4_causal_readiness.png (154.5 KB)	stage05	png	present
+script-stage-01-source-inventory	script	run-output/scripts/stage01_source_inventory.py	Stage script: stage01_source_inventory.py	stage01	py	present
+script-stage-02-reconstruct-dataset	script	run-output/scripts/stage02_reconstruct_dataset.py	Stage script: stage02_reconstruct_dataset.py	stage02	py	present
+script-stage-03-quality-audit	script	run-output/scripts/stage03_quality_audit.py	Stage script: stage03_quality_audit.py	stage03	py	present
+script-stage-04-context-expansion	script	run-output/scripts/stage04_context_expansion.py	Stage script: stage04_context_expansion.py	stage04	py	present
+script-stage-05-generate-figures	script	run-output/scripts/stage05_generate_figures.py	Stage script: stage05_generate_figures.py	stage05	py	present
+script-stage-06-write-report	script	run-output/scripts/stage06_write_report.py	Stage script: stage06_write_report.py	stage06	py	present
+report-001	report	run-output/reports/case45_local_demo_report.md	Final demo report (Stage 6)	stage06	md	present
+checklist-001	checklist	run-output/results/final_artifact_checklist.json	Final artifact checklist (JSON)	stage06	json	present
+checklist-002	checklist	run-output/results/final_artifact_checklist.tsv	Final artifact checklist (TSV)	stage06	tsv	present
