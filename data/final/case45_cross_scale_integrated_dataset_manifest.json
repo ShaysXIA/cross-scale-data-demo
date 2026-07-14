@@ -1,0 +1,39 @@
+{
+  "coverage_summary": {
+    "L0": 35,
+    "L1": 27,
+    "L2": 27,
+    "L3_measured": 27,
+    "L4_measured": 35,
+    "L5": 27
+  },
+  "dataset_id": "case45_cross_scale_integrated_dataset",
+  "files": {
+    "case45_cross_scale_integrated_dataset.json": {
+      "path": "data/final/case45_cross_scale_integrated_dataset.json",
+      "sha256": "05727d9059d57a847426acc4a060b3d8edde11006e390703479e1ce271c0c9ac",
+      "size_bytes": 237344
+    },
+    "case45_cross_scale_integrated_dataset.jsonl": {
+      "path": "data/final/case45_cross_scale_integrated_dataset.jsonl",
+      "sha256": "374d1f0fbc84dd22c751a87f858999c0f1f5659f8b07f4056270a865e4b49e84",
+      "size_bytes": 162077
+    },
+    "case45_cross_scale_integrated_dataset.tsv": {
+      "path": "data/final/case45_cross_scale_integrated_dataset.tsv",
+      "sha256": "84f90af493b36533281b0429b8f82dc643291e37ddee77c89ee61dd0676b97c2",
+      "size_bytes": 104960
+    },
+    "case45_cross_scale_integrated_dataset_schema.json": {
+      "path": "data/final/case45_cross_scale_integrated_dataset_schema.json",
+      "sha256": "e273fd29683e99b9a15c83fda4e286423df9821e75990d9538d6829752a47722",
+      "size_bytes": 1582
+    }
+  },
+  "notes": [
+    "This is the final integrated guide-level dataset; it is distinct from run-output/datasets/case45_review_table.*, which is a downstream review table.",
+    "The raw-derived processed layer remains in data/processed/ for auditability."
+  ],
+  "record_count": 35,
+  "run_id": "case45_p0_20260708T1015Z"
+}

@@ -1,0 +1,27 @@
+{
+  "dataset_id": "case45_cross_scale_integrated_dataset",
+  "description": "Final integrated cross-scale guide-level dataset joining processed L3/L4 responses, L0 perturbation metadata, L1/L2 annotations, L5 endpoint labels, selected cell counts, and provenance.",
+  "important_fields": {
+    "L0_perturbation": "guide, target, perturbation class",
+    "L1_protein_annotation": "UniProt protein-level annotation fields",
+    "L2_pathway_annotation": "Reactome/pathway-level annotation fields",
+    "L3_rna_response": "processed guide-vs-control RNA response",
+    "L4_adt_response": "processed guide-vs-control ADT/protein response",
+    "L5_dependency_endpoint": "DepMap endpoint label/score",
+    "coverage_flags": "layer availability flags"
+  },
+  "primary_files": {
+    "json": "data/final/case45_cross_scale_integrated_dataset.json",
+    "jsonl": "data/final/case45_cross_scale_integrated_dataset.jsonl",
+    "tsv": "data/final/case45_cross_scale_integrated_dataset.tsv"
+  },
+  "record_count": 35,
+  "row_grain": "one row per perturbation guide",
+  "source_files": {
+    "processed_l3_rna_response": "data/processed/case45_l0_l5/case45_p0_20260708T1015Z/l3_guide_rna_response.json",
+    "processed_l4_adt_response": "data/processed/case45_l0_l5/case45_p0_20260708T1015Z/l4_guide_adt_response.json",
+    "processed_manifest": "data/processed/case45_l0_l5/case45_p0_20260708T1015Z/processed_manifest.json",
+    "review_table": "run-output/datasets/case45_review_table.jsonl",
+    "selected_cells": "data/processed/case45_l0_l5/case45_p0_20260708T1015Z/selected_cells.tsv"
+  }
+}
