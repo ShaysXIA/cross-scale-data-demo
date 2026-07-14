@@ -32,8 +32,19 @@
   },
   "notes": [
     "This is the final integrated guide-level dataset; it is distinct from run-output/datasets/case45_review_table.*, which is a downstream review table.",
-    "The raw-derived processed layer remains in data/processed/ for auditability."
+    "The raw-derived processed layer remains in data/processed/ for auditability.",
+    "Use data/final/case45_cross_scale_integrated_dataset.jsonl as the primary showcase dataset entry point."
   ],
   "record_count": 35,
-  "run_id": "case45_p0_20260708T1015Z"
+  "run_id": "case45_p0_20260708T1015Z",
+  "showcase_readiness": {
+    "caveats": [
+      "This is a 35-guide demonstration-scale dataset, not a powered benchmark cohort.",
+      "L1/L2/L5 coverage is 27/35 because NT controls do not have gene-level UniProt/Reactome/DepMap endpoint annotations.",
+      "L3 is measured for perturbation guides as guide-vs-control RNA response; NT guides are encoded as control_reference rather than perturbation response rows.",
+      "The raw-derived cDNA selected count matrix is represented by summary files; full selected cDNA matrix is not stored in this compact showcase repository."
+    ],
+    "status": "suitable_with_caveats",
+    "summary": "The integrated dataset supports a cross-scale showcase at guide-level grain. 27 perturbation guides have L0-L5 coverage; 8 NT control guides are retained as controls with L0/L4/control-reference L3 but no biological L1/L2/L5 endpoint."
+  }
 }

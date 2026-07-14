@@ -104,8 +104,8 @@
   },
   "l3_source_cdna_file": "/root/SciForge/data/raw/GSE153056/GSM4633614_ECCITE_cDNA_counts.tsv.gz",
   "l3_status": "measured",
-  "l4_blocker_reason": "No measured per-guide ADT response values found in current processed bridge or L4 artifacts",
-  "l4_status": "blocked",
+  "l4_resolution_note": "Measured per-guide ADT responses are available in l4_guide_adt_response.tsv/json for 35 guides and 4 markers.",
+  "l4_status": "measured",
   "processed_directory": "/root/SciForge/data/processed/case45_l0_l5/case45_p0_20260708T1015Z",
   "required_contract": {
     "guide_cell_assignment.tsv": "PASS",

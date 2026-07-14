@@ -39,6 +39,18 @@ This final dataset has one row per perturbation guide and integrates:
 
 Coverage in the integrated file: L0 35/35, L1 27/35, L2 27/35, L3 measured 27/35, L4 measured 35/35, L5 27/35.
 
+## Showcase Interpretation
+
+This dataset is suitable for showcasing a cross-scale SciForge workflow, with these boundaries:
+
+- 27 perturbation guides form the main L0-L5 cross-scale examples.
+- 8 NT guides are retained as control references; they intentionally do not have L1/L2/L5 biological endpoint annotations.
+- L3 is measured as guide-vs-control RNA response for perturbation guides; NT rows are marked as `control_reference`.
+- L4 is measured for all 35 guides using 4 ADT markers: CD86, PDL1, PDL2, and CD366.
+- The selected cDNA matrix is represented by summary files in this compact repository; the full raw cDNA source is not bundled.
+
+For a showcase, use `data/final/case45_cross_scale_integrated_dataset.jsonl` as the primary dataset and `data/processed/` as the audit trail.
+
 ## Raw-Derived Processed Layer
 
 The processed data layer is stored at:
