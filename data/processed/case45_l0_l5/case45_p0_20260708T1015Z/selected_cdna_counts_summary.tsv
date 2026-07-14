@@ -1,0 +1,2 @@
+source	representation	reason_full_matrix_not_materialized	selected_cells	selected_guides	control_cells
+GSM4633614_ECCITE_cDNA_counts.tsv.gz	summary plus l3_guide_rna_response.tsv/json	selected cDNA matrix is bulky; guide-vs-control response was computed by streaming raw cDNA counts	8679	35	2386

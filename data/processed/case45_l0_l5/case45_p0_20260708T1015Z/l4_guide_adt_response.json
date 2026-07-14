@@ -1,0 +1,1350 @@
+{
+  "source": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+  "source_status": "measured",
+  "guide_count": 35,
+  "fields": [
+    "guide_id",
+    "markers",
+    "n_control_cells",
+    "n_guide_cells",
+    "status",
+    "strongest_delta",
+    "strongest_log2fc",
+    "strongest_marker",
+    "target_gene",
+    "source_file",
+    "source_status"
+  ],
+  "per_guide": [
+    {
+      "guide_id": "PDCD1LG2g1",
+      "markers": {
+        "CD86": {
+          "guide_mean": 111.72,
+          "control_mean": 108.59,
+          "delta_mean": 3.13,
+          "log2fc": 0.0406
+        },
+        "PDL1": {
+          "guide_mean": 229.42,
+          "control_mean": 218.47,
+          "delta_mean": 10.95,
+          "log2fc": 0.0702
+        },
+        "PDL2": {
+          "guide_mean": 48.98,
+          "control_mean": 67.12,
+          "delta_mean": -18.14,
+          "log2fc": -0.4468
+        },
+        "CD366": {
+          "guide_mean": 42.44,
+          "control_mean": 43.19,
+          "delta_mean": -0.76,
+          "log2fc": -0.0249
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 142,
+      "status": "measured",
+      "strongest_delta": -18.14,
+      "strongest_log2fc": -0.4468,
+      "strongest_marker": "PDL2",
+      "target_gene": "PDCD1LG2",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "PDCD1LG2g3",
+      "markers": {
+        "CD86": {
+          "guide_mean": 112.54,
+          "control_mean": 108.59,
+          "delta_mean": 3.94,
+          "log2fc": 0.051
+        },
+        "PDL1": {
+          "guide_mean": 226.56,
+          "control_mean": 218.47,
+          "delta_mean": 8.09,
+          "log2fc": 0.0522
+        },
+        "PDL2": {
+          "guide_mean": 55.61,
+          "control_mean": 67.12,
+          "delta_mean": -11.51,
+          "log2fc": -0.267
+        },
+        "CD366": {
+          "guide_mean": 43.58,
+          "control_mean": 43.19,
+          "delta_mean": 0.39,
+          "log2fc": 0.0125
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 263,
+      "status": "measured",
+      "strongest_delta": -11.51,
+      "strongest_log2fc": -0.267,
+      "strongest_marker": "PDL2",
+      "target_gene": "PDCD1LG2",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "PDCD1LG2g4",
+      "markers": {
+        "CD86": {
+          "guide_mean": 101.12,
+          "control_mean": 108.59,
+          "delta_mean": -7.47,
+          "log2fc": -0.1019
+        },
+        "PDL1": {
+          "guide_mean": 198.09,
+          "control_mean": 218.47,
+          "delta_mean": -20.38,
+          "log2fc": -0.1406
+        },
+        "PDL2": {
+          "guide_mean": 39.64,
+          "control_mean": 67.12,
+          "delta_mean": -27.48,
+          "log2fc": -0.7453
+        },
+        "CD366": {
+          "guide_mean": 35.29,
+          "control_mean": 43.19,
+          "delta_mean": -7.9,
+          "log2fc": -0.284
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 136,
+      "status": "measured",
+      "strongest_delta": -27.48,
+      "strongest_log2fc": -0.7453,
+      "strongest_marker": "PDL2",
+      "target_gene": "PDCD1LG2",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "PDCD1LG2g2",
+      "markers": {
+        "CD86": {
+          "guide_mean": 91.36,
+          "control_mean": 108.59,
+          "delta_mean": -17.24,
+          "log2fc": -0.2469
+        },
+        "PDL1": {
+          "guide_mean": 191.26,
+          "control_mean": 218.47,
+          "delta_mean": -27.21,
+          "log2fc": -0.1909
+        },
+        "PDL2": {
+          "guide_mean": 39.34,
+          "control_mean": 67.12,
+          "delta_mean": -27.78,
+          "log2fc": -0.7559
+        },
+        "CD366": {
+          "guide_mean": 33.33,
+          "control_mean": 43.19,
+          "delta_mean": -9.86,
+          "log2fc": -0.3644
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 76,
+      "status": "measured",
+      "strongest_delta": -27.78,
+      "strongest_log2fc": -0.7559,
+      "strongest_marker": "PDL2",
+      "target_gene": "PDCD1LG2",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "STAT2g2",
+      "markers": {
+        "CD86": {
+          "guide_mean": 97.05,
+          "control_mean": 108.59,
+          "delta_mean": -11.54,
+          "log2fc": -0.1606
+        },
+        "PDL1": {
+          "guide_mean": 195.81,
+          "control_mean": 218.47,
+          "delta_mean": -22.66,
+          "log2fc": -0.1572
+        },
+        "PDL2": {
+          "guide_mean": 64.57,
+          "control_mean": 67.12,
+          "delta_mean": -2.56,
+          "log2fc": -0.0552
+        },
+        "CD366": {
+          "guide_mean": 45.15,
+          "control_mean": 43.19,
+          "delta_mean": 1.96,
+          "log2fc": 0.0627
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 266,
+      "status": "measured",
+      "strongest_delta": -22.66,
+      "strongest_log2fc": -0.1572,
+      "strongest_marker": "PDL1",
+      "target_gene": "STAT2",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "STAT1g2",
+      "markers": {
+        "CD86": {
+          "guide_mean": 116.2,
+          "control_mean": 108.59,
+          "delta_mean": 7.61,
+          "log2fc": 0.0969
+        },
+        "PDL1": {
+          "guide_mean": 99.05,
+          "control_mean": 218.47,
+          "delta_mean": -119.42,
+          "log2fc": -1.1333
+        },
+        "PDL2": {
+          "guide_mean": 49.4,
+          "control_mean": 67.12,
+          "delta_mean": -17.72,
+          "log2fc": -0.4346
+        },
+        "CD366": {
+          "guide_mean": 44.0,
+          "control_mean": 43.19,
+          "delta_mean": 0.81,
+          "log2fc": 0.0261
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 99,
+      "status": "measured",
+      "strongest_delta": -119.42,
+      "strongest_log2fc": -1.1333,
+      "strongest_marker": "PDL1",
+      "target_gene": "STAT1",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "STAT3g4",
+      "markers": {
+        "CD86": {
+          "guide_mean": 104.92,
+          "control_mean": 108.59,
+          "delta_mean": -3.67,
+          "log2fc": -0.0492
+        },
+        "PDL1": {
+          "guide_mean": 244.25,
+          "control_mean": 218.47,
+          "delta_mean": 25.78,
+          "log2fc": 0.1603
+        },
+        "PDL2": {
+          "guide_mean": 72.05,
+          "control_mean": 67.12,
+          "delta_mean": 4.93,
+          "log2fc": 0.1008
+        },
+        "CD366": {
+          "guide_mean": 51.01,
+          "control_mean": 43.19,
+          "delta_mean": 7.82,
+          "log2fc": 0.2351
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 75,
+      "status": "measured",
+      "strongest_delta": 25.78,
+      "strongest_log2fc": 0.1603,
+      "strongest_marker": "PDL1",
+      "target_gene": "STAT3",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "JAK2g2",
+      "markers": {
+        "CD86": {
+          "guide_mean": 95.81,
+          "control_mean": 108.59,
+          "delta_mean": -12.79,
+          "log2fc": -0.179
+        },
+        "PDL1": {
+          "guide_mean": 92.71,
+          "control_mean": 218.47,
+          "delta_mean": -125.76,
+          "log2fc": -1.2278
+        },
+        "PDL2": {
+          "guide_mean": 48.4,
+          "control_mean": 67.12,
+          "delta_mean": -18.72,
+          "log2fc": -0.4636
+        },
+        "CD366": {
+          "guide_mean": 42.12,
+          "control_mean": 43.19,
+          "delta_mean": -1.07,
+          "log2fc": -0.0355
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 363,
+      "status": "measured",
+      "strongest_delta": -125.76,
+      "strongest_log2fc": -1.2278,
+      "strongest_marker": "PDL1",
+      "target_gene": "JAK2",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "STAT5Ag2",
+      "markers": {
+        "CD86": {
+          "guide_mean": 111.75,
+          "control_mean": 108.59,
+          "delta_mean": 3.16,
+          "log2fc": 0.041
+        },
+        "PDL1": {
+          "guide_mean": 225.03,
+          "control_mean": 218.47,
+          "delta_mean": 6.56,
+          "log2fc": 0.0425
+        },
+        "PDL2": {
+          "guide_mean": 66.22,
+          "control_mean": 67.12,
+          "delta_mean": -0.91,
+          "log2fc": -0.0193
+        },
+        "CD366": {
+          "guide_mean": 43.94,
+          "control_mean": 43.19,
+          "delta_mean": 0.74,
+          "log2fc": 0.0241
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 157,
+      "status": "measured",
+      "strongest_delta": 6.56,
+      "strongest_log2fc": 0.0425,
+      "strongest_marker": "PDL1",
+      "target_gene": "STAT5A",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "JAK2g3",
+      "markers": {
+        "CD86": {
+          "guide_mean": 99.9,
+          "control_mean": 108.59,
+          "delta_mean": -8.69,
+          "log2fc": -0.1192
+        },
+        "PDL1": {
+          "guide_mean": 100.66,
+          "control_mean": 218.47,
+          "delta_mean": -117.81,
+          "log2fc": -1.1102
+        },
+        "PDL2": {
+          "guide_mean": 46.98,
+          "control_mean": 67.12,
+          "delta_mean": -20.14,
+          "log2fc": -0.5056
+        },
+        "CD366": {
+          "guide_mean": 40.34,
+          "control_mean": 43.19,
+          "delta_mean": -2.86,
+          "log2fc": -0.0964
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 173,
+      "status": "measured",
+      "strongest_delta": -117.81,
+      "strongest_log2fc": -1.1102,
+      "strongest_marker": "PDL1",
+      "target_gene": "JAK2",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "STAT5Ag3",
+      "markers": {
+        "CD86": {
+          "guide_mean": 112.45,
+          "control_mean": 108.59,
+          "delta_mean": 3.86,
+          "log2fc": 0.0499
+        },
+        "PDL1": {
+          "guide_mean": 218.71,
+          "control_mean": 218.47,
+          "delta_mean": 0.24,
+          "log2fc": 0.0016
+        },
+        "PDL2": {
+          "guide_mean": 64.89,
+          "control_mean": 67.12,
+          "delta_mean": -2.23,
+          "log2fc": -0.048
+        },
+        "CD366": {
+          "guide_mean": 42.49,
+          "control_mean": 43.19,
+          "delta_mean": -0.7,
+          "log2fc": -0.023
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 235,
+      "status": "measured",
+      "strongest_delta": 3.86,
+      "strongest_log2fc": 0.0499,
+      "strongest_marker": "CD86",
+      "target_gene": "STAT5A",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "STAT3g3",
+      "markers": {
+        "CD86": {
+          "guide_mean": 90.25,
+          "control_mean": 108.59,
+          "delta_mean": -18.34,
+          "log2fc": -0.2642
+        },
+        "PDL1": {
+          "guide_mean": 205.45,
+          "control_mean": 218.47,
+          "delta_mean": -13.02,
+          "log2fc": -0.0883
+        },
+        "PDL2": {
+          "guide_mean": 60.11,
+          "control_mean": 67.12,
+          "delta_mean": -7.01,
+          "log2fc": -0.1567
+        },
+        "CD366": {
+          "guide_mean": 39.22,
+          "control_mean": 43.19,
+          "delta_mean": -3.97,
+          "log2fc": -0.1358
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 208,
+      "status": "measured",
+      "strongest_delta": -18.34,
+      "strongest_log2fc": -0.2642,
+      "strongest_marker": "CD86",
+      "target_gene": "STAT3",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "IRF7g2",
+      "markers": {
+        "CD86": {
+          "guide_mean": 134.33,
+          "control_mean": 108.59,
+          "delta_mean": 25.74,
+          "log2fc": 0.3044
+        },
+        "PDL1": {
+          "guide_mean": 242.07,
+          "control_mean": 218.47,
+          "delta_mean": 23.6,
+          "log2fc": 0.1474
+        },
+        "PDL2": {
+          "guide_mean": 69.74,
+          "control_mean": 67.12,
+          "delta_mean": 2.62,
+          "log2fc": 0.0544
+        },
+        "CD366": {
+          "guide_mean": 52.72,
+          "control_mean": 43.19,
+          "delta_mean": 9.52,
+          "log2fc": 0.2815
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 165,
+      "status": "measured",
+      "strongest_delta": 25.74,
+      "strongest_log2fc": 0.3044,
+      "strongest_marker": "CD86",
+      "target_gene": "IRF7",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "IFNGR1g4",
+      "markers": {
+        "CD86": {
+          "guide_mean": 100.02,
+          "control_mean": 108.59,
+          "delta_mean": -8.57,
+          "log2fc": -0.1175
+        },
+        "PDL1": {
+          "guide_mean": 115.6,
+          "control_mean": 218.47,
+          "delta_mean": -102.87,
+          "log2fc": -0.9125
+        },
+        "PDL2": {
+          "guide_mean": 48.33,
+          "control_mean": 67.12,
+          "delta_mean": -18.79,
+          "log2fc": -0.4656
+        },
+        "CD366": {
+          "guide_mean": 45.08,
+          "control_mean": 43.19,
+          "delta_mean": 1.89,
+          "log2fc": 0.0604
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 281,
+      "status": "measured",
+      "strongest_delta": -102.87,
+      "strongest_log2fc": -0.9125,
+      "strongest_marker": "PDL1",
+      "target_gene": "IFNGR1",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "IRF1g2",
+      "markers": {
+        "CD86": {
+          "guide_mean": 105.38,
+          "control_mean": 108.59,
+          "delta_mean": -3.21,
+          "log2fc": -0.0429
+        },
+        "PDL1": {
+          "guide_mean": 181.08,
+          "control_mean": 218.47,
+          "delta_mean": -37.39,
+          "log2fc": -0.2695
+        },
+        "PDL2": {
+          "guide_mean": 58.16,
+          "control_mean": 67.12,
+          "delta_mean": -8.96,
+          "log2fc": -0.2034
+        },
+        "CD366": {
+          "guide_mean": 51.24,
+          "control_mean": 43.19,
+          "delta_mean": 8.04,
+          "log2fc": 0.2413
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 250,
+      "status": "measured",
+      "strongest_delta": -37.39,
+      "strongest_log2fc": -0.2695,
+      "strongest_marker": "PDL1",
+      "target_gene": "IRF1",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "IFNGR1g2",
+      "markers": {
+        "CD86": {
+          "guide_mean": 115.6,
+          "control_mean": 108.59,
+          "delta_mean": 7.01,
+          "log2fc": 0.0894
+        },
+        "PDL1": {
+          "guide_mean": 158.23,
+          "control_mean": 218.47,
+          "delta_mean": -60.24,
+          "log2fc": -0.4629
+        },
+        "PDL2": {
+          "guide_mean": 58.11,
+          "control_mean": 67.12,
+          "delta_mean": -9.02,
+          "log2fc": -0.2048
+        },
+        "CD366": {
+          "guide_mean": 53.07,
+          "control_mean": 43.19,
+          "delta_mean": 9.88,
+          "log2fc": 0.2911
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 359,
+      "status": "measured",
+      "strongest_delta": -60.24,
+      "strongest_log2fc": -0.4629,
+      "strongest_marker": "PDL1",
+      "target_gene": "IFNGR1",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "IFNGR1g3",
+      "markers": {
+        "CD86": {
+          "guide_mean": 92.41,
+          "control_mean": 108.59,
+          "delta_mean": -16.18,
+          "log2fc": -0.2304
+        },
+        "PDL1": {
+          "guide_mean": 79.94,
+          "control_mean": 218.47,
+          "delta_mean": -138.53,
+          "log2fc": -1.4391
+        },
+        "PDL2": {
+          "guide_mean": 44.61,
+          "control_mean": 67.12,
+          "delta_mean": -22.51,
+          "log2fc": -0.5788
+        },
+        "CD366": {
+          "guide_mean": 37.47,
+          "control_mean": 43.19,
+          "delta_mean": -5.72,
+          "log2fc": -0.2001
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 416,
+      "status": "measured",
+      "strongest_delta": -138.53,
+      "strongest_log2fc": -1.4391,
+      "strongest_marker": "PDL1",
+      "target_gene": "IFNGR1",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "IRF1g1",
+      "markers": {
+        "CD86": {
+          "guide_mean": 124.12,
+          "control_mean": 108.59,
+          "delta_mean": 15.53,
+          "log2fc": 0.1912
+        },
+        "PDL1": {
+          "guide_mean": 231.05,
+          "control_mean": 218.47,
+          "delta_mean": 12.58,
+          "log2fc": 0.0804
+        },
+        "PDL2": {
+          "guide_mean": 58.03,
+          "control_mean": 67.12,
+          "delta_mean": -9.09,
+          "log2fc": -0.2066
+        },
+        "CD366": {
+          "guide_mean": 50.36,
+          "control_mean": 43.19,
+          "delta_mean": 7.17,
+          "log2fc": 0.2169
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 298,
+      "status": "measured",
+      "strongest_delta": 15.53,
+      "strongest_log2fc": 0.1912,
+      "strongest_marker": "CD86",
+      "target_gene": "IRF1",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "IRF1g4",
+      "markers": {
+        "CD86": {
+          "guide_mean": 125.55,
+          "control_mean": 108.59,
+          "delta_mean": 16.96,
+          "log2fc": 0.2076
+        },
+        "PDL1": {
+          "guide_mean": 133.5,
+          "control_mean": 218.47,
+          "delta_mean": -84.97,
+          "log2fc": -0.7064
+        },
+        "PDL2": {
+          "guide_mean": 50.4,
+          "control_mean": 67.12,
+          "delta_mean": -16.72,
+          "log2fc": -0.4064
+        },
+        "CD366": {
+          "guide_mean": 49.21,
+          "control_mean": 43.19,
+          "delta_mean": 6.02,
+          "log2fc": 0.1842
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 329,
+      "status": "measured",
+      "strongest_delta": -84.97,
+      "strongest_log2fc": -0.7064,
+      "strongest_marker": "PDL1",
+      "target_gene": "IRF1",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "IFNGR2g2",
+      "markers": {
+        "CD86": {
+          "guide_mean": 99.01,
+          "control_mean": 108.59,
+          "delta_mean": -9.58,
+          "log2fc": -0.132
+        },
+        "PDL1": {
+          "guide_mean": 113.66,
+          "control_mean": 218.47,
+          "delta_mean": -104.81,
+          "log2fc": -0.9366
+        },
+        "PDL2": {
+          "guide_mean": 52.12,
+          "control_mean": 67.12,
+          "delta_mean": -15.01,
+          "log2fc": -0.3589
+        },
+        "CD366": {
+          "guide_mean": 41.98,
+          "control_mean": 43.19,
+          "delta_mean": -1.21,
+          "log2fc": -0.04
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 397,
+      "status": "measured",
+      "strongest_delta": -104.81,
+      "strongest_log2fc": -0.9366,
+      "strongest_marker": "PDL1",
+      "target_gene": "IFNGR2",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "NFKBIAg1",
+      "markers": {
+        "CD86": {
+          "guide_mean": 105.9,
+          "control_mean": 108.59,
+          "delta_mean": -2.69,
+          "log2fc": -0.0359
+        },
+        "PDL1": {
+          "guide_mean": 211.39,
+          "control_mean": 218.47,
+          "delta_mean": -7.08,
+          "log2fc": -0.0473
+        },
+        "PDL2": {
+          "guide_mean": 63.87,
+          "control_mean": 67.12,
+          "delta_mean": -3.25,
+          "log2fc": -0.0705
+        },
+        "CD366": {
+          "guide_mean": 42.17,
+          "control_mean": 43.19,
+          "delta_mean": -1.02,
+          "log2fc": -0.0338
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 285,
+      "status": "measured",
+      "strongest_delta": -7.08,
+      "strongest_log2fc": -0.0473,
+      "strongest_marker": "PDL1",
+      "target_gene": "NFKBIA",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "NFKBIAg2",
+      "markers": {
+        "CD86": {
+          "guide_mean": 121.44,
+          "control_mean": 108.59,
+          "delta_mean": 12.85,
+          "log2fc": 0.16
+        },
+        "PDL1": {
+          "guide_mean": 251.9,
+          "control_mean": 218.47,
+          "delta_mean": 33.43,
+          "log2fc": 0.2046
+        },
+        "PDL2": {
+          "guide_mean": 63.62,
+          "control_mean": 67.12,
+          "delta_mean": -3.51,
+          "log2fc": -0.0762
+        },
+        "CD366": {
+          "guide_mean": 46.23,
+          "control_mean": 43.19,
+          "delta_mean": 3.04,
+          "log2fc": 0.096
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 282,
+      "status": "measured",
+      "strongest_delta": 33.43,
+      "strongest_log2fc": 0.2046,
+      "strongest_marker": "PDL1",
+      "target_gene": "NFKBIA",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "NFKBIAg3",
+      "markers": {
+        "CD86": {
+          "guide_mean": 112.23,
+          "control_mean": 108.59,
+          "delta_mean": 3.64,
+          "log2fc": 0.0471
+        },
+        "PDL1": {
+          "guide_mean": 206.95,
+          "control_mean": 218.47,
+          "delta_mean": -11.52,
+          "log2fc": -0.0778
+        },
+        "PDL2": {
+          "guide_mean": 62.61,
+          "control_mean": 67.12,
+          "delta_mean": -4.51,
+          "log2fc": -0.0989
+        },
+        "CD366": {
+          "guide_mean": 45.92,
+          "control_mean": 43.19,
+          "delta_mean": 2.73,
+          "log2fc": 0.0864
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 187,
+      "status": "measured",
+      "strongest_delta": -11.52,
+      "strongest_log2fc": -0.0778,
+      "strongest_marker": "PDL1",
+      "target_gene": "NFKBIA",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "NFKBIAg4",
+      "markers": {
+        "CD86": {
+          "guide_mean": 129.76,
+          "control_mean": 108.59,
+          "delta_mean": 21.17,
+          "log2fc": 0.2547
+        },
+        "PDL1": {
+          "guide_mean": 273.33,
+          "control_mean": 218.47,
+          "delta_mean": 54.86,
+          "log2fc": 0.3219
+        },
+        "PDL2": {
+          "guide_mean": 79.52,
+          "control_mean": 67.12,
+          "delta_mean": 12.39,
+          "log2fc": 0.2411
+        },
+        "CD366": {
+          "guide_mean": 56.45,
+          "control_mean": 43.19,
+          "delta_mean": 13.26,
+          "log2fc": 0.3786
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 33,
+      "status": "measured",
+      "strongest_delta": 54.86,
+      "strongest_log2fc": 0.3219,
+      "strongest_marker": "PDL1",
+      "target_gene": "NFKBIA",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "NTg1",
+      "markers": {
+        "CD86": {
+          "guide_mean": 108.19,
+          "control_mean": 108.59,
+          "delta_mean": -0.4,
+          "log2fc": -0.0052
+        },
+        "PDL1": {
+          "guide_mean": 216.25,
+          "control_mean": 218.47,
+          "delta_mean": -2.22,
+          "log2fc": -0.0146
+        },
+        "PDL2": {
+          "guide_mean": 65.93,
+          "control_mean": 67.12,
+          "delta_mean": -1.2,
+          "log2fc": -0.0256
+        },
+        "CD366": {
+          "guide_mean": 44.17,
+          "control_mean": 43.19,
+          "delta_mean": 0.97,
+          "log2fc": 0.0314
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 303,
+      "status": "measured",
+      "strongest_delta": -2.22,
+      "strongest_log2fc": -0.0146,
+      "strongest_marker": "PDL1",
+      "target_gene": "NT",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "NTg4",
+      "markers": {
+        "CD86": {
+          "guide_mean": 115.27,
+          "control_mean": 108.59,
+          "delta_mean": 6.68,
+          "log2fc": 0.0853
+        },
+        "PDL1": {
+          "guide_mean": 220.55,
+          "control_mean": 218.47,
+          "delta_mean": 2.08,
+          "log2fc": 0.0136
+        },
+        "PDL2": {
+          "guide_mean": 65.98,
+          "control_mean": 67.12,
+          "delta_mean": -1.14,
+          "log2fc": -0.0244
+        },
+        "CD366": {
+          "guide_mean": 46.98,
+          "control_mean": 43.19,
+          "delta_mean": 3.79,
+          "log2fc": 0.1187
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 431,
+      "status": "measured",
+      "strongest_delta": 6.68,
+      "strongest_log2fc": 0.0853,
+      "strongest_marker": "CD86",
+      "target_gene": "NT",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "NTg5",
+      "markers": {
+        "CD86": {
+          "guide_mean": 106.57,
+          "control_mean": 108.59,
+          "delta_mean": -2.02,
+          "log2fc": -0.0269
+        },
+        "PDL1": {
+          "guide_mean": 205.45,
+          "control_mean": 218.47,
+          "delta_mean": -13.02,
+          "log2fc": -0.0882
+        },
+        "PDL2": {
+          "guide_mean": 64.26,
+          "control_mean": 67.12,
+          "delta_mean": -2.86,
+          "log2fc": -0.0619
+        },
+        "CD366": {
+          "guide_mean": 39.54,
+          "control_mean": 43.19,
+          "delta_mean": -3.65,
+          "log2fc": -0.1243
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 305,
+      "status": "measured",
+      "strongest_delta": -13.02,
+      "strongest_log2fc": -0.0882,
+      "strongest_marker": "PDL1",
+      "target_gene": "NT",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "NTg8",
+      "markers": {
+        "CD86": {
+          "guide_mean": 103.32,
+          "control_mean": 108.59,
+          "delta_mean": -5.27,
+          "log2fc": -0.0711
+        },
+        "PDL1": {
+          "guide_mean": 189.88,
+          "control_mean": 218.47,
+          "delta_mean": -28.59,
+          "log2fc": -0.2014
+        },
+        "PDL2": {
+          "guide_mean": 66.71,
+          "control_mean": 67.12,
+          "delta_mean": -0.41,
+          "log2fc": -0.0087
+        },
+        "CD366": {
+          "guide_mean": 37.96,
+          "control_mean": 43.19,
+          "delta_mean": -5.23,
+          "log2fc": -0.1816
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 56,
+      "status": "measured",
+      "strongest_delta": -28.59,
+      "strongest_log2fc": -0.2014,
+      "strongest_marker": "PDL1",
+      "target_gene": "NT",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "NTg9",
+      "markers": {
+        "CD86": {
+          "guide_mean": 104.46,
+          "control_mean": 108.59,
+          "delta_mean": -4.13,
+          "log2fc": -0.0554
+        },
+        "PDL1": {
+          "guide_mean": 217.45,
+          "control_mean": 218.47,
+          "delta_mean": -1.02,
+          "log2fc": -0.0067
+        },
+        "PDL2": {
+          "guide_mean": 70.25,
+          "control_mean": 67.12,
+          "delta_mean": 3.13,
+          "log2fc": 0.0647
+        },
+        "CD366": {
+          "guide_mean": 46.68,
+          "control_mean": 43.19,
+          "delta_mean": 3.49,
+          "log2fc": 0.1097
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 261,
+      "status": "measured",
+      "strongest_delta": -4.13,
+      "strongest_log2fc": -0.0554,
+      "strongest_marker": "CD86",
+      "target_gene": "NT",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "NTg2",
+      "markers": {
+        "CD86": {
+          "guide_mean": 106.9,
+          "control_mean": 108.59,
+          "delta_mean": -1.7,
+          "log2fc": -0.0225
+        },
+        "PDL1": {
+          "guide_mean": 238.02,
+          "control_mean": 218.47,
+          "delta_mean": 19.55,
+          "log2fc": 0.1231
+        },
+        "PDL2": {
+          "guide_mean": 67.98,
+          "control_mean": 67.12,
+          "delta_mean": 0.86,
+          "log2fc": 0.018
+        },
+        "CD366": {
+          "guide_mean": 43.63,
+          "control_mean": 43.19,
+          "delta_mean": 0.44,
+          "log2fc": 0.0143
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 106,
+      "status": "measured",
+      "strongest_delta": 19.55,
+      "strongest_log2fc": 0.1231,
+      "strongest_marker": "PDL1",
+      "target_gene": "NT",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "NTg10",
+      "markers": {
+        "CD86": {
+          "guide_mean": 120.08,
+          "control_mean": 108.59,
+          "delta_mean": 11.48,
+          "log2fc": 0.1438
+        },
+        "PDL1": {
+          "guide_mean": 228.61,
+          "control_mean": 218.47,
+          "delta_mean": 10.14,
+          "log2fc": 0.0652
+        },
+        "PDL2": {
+          "guide_mean": 68.57,
+          "control_mean": 67.12,
+          "delta_mean": 1.45,
+          "log2fc": 0.0303
+        },
+        "CD366": {
+          "guide_mean": 40.8,
+          "control_mean": 43.19,
+          "delta_mean": -2.4,
+          "log2fc": -0.0804
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 235,
+      "status": "measured",
+      "strongest_delta": 11.48,
+      "strongest_log2fc": 0.1438,
+      "strongest_marker": "CD86",
+      "target_gene": "NT",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "NTg7",
+      "markers": {
+        "CD86": {
+          "guide_mean": 98.83,
+          "control_mean": 108.59,
+          "delta_mean": -9.77,
+          "log2fc": -0.1346
+        },
+        "PDL1": {
+          "guide_mean": 210.25,
+          "control_mean": 218.47,
+          "delta_mean": -8.22,
+          "log2fc": -0.0551
+        },
+        "PDL2": {
+          "guide_mean": 66.49,
+          "control_mean": 67.12,
+          "delta_mean": -0.64,
+          "log2fc": -0.0136
+        },
+        "CD366": {
+          "guide_mean": 41.68,
+          "control_mean": 43.19,
+          "delta_mean": -1.52,
+          "log2fc": -0.0503
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 445,
+      "status": "measured",
+      "strongest_delta": -9.77,
+      "strongest_log2fc": -0.1346,
+      "strongest_marker": "CD86",
+      "target_gene": "NT",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "CAV1g4",
+      "markers": {
+        "CD86": {
+          "guide_mean": 99.81,
+          "control_mean": 108.59,
+          "delta_mean": -8.78,
+          "log2fc": -0.1205
+        },
+        "PDL1": {
+          "guide_mean": 203.11,
+          "control_mean": 218.47,
+          "delta_mean": -15.36,
+          "log2fc": -0.1047
+        },
+        "PDL2": {
+          "guide_mean": 61.62,
+          "control_mean": 67.12,
+          "delta_mean": -5.5,
+          "log2fc": -0.1215
+        },
+        "CD366": {
+          "guide_mean": 41.7,
+          "control_mean": 43.19,
+          "delta_mean": -1.49,
+          "log2fc": -0.0495
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 134,
+      "status": "measured",
+      "strongest_delta": -15.36,
+      "strongest_log2fc": -0.1047,
+      "strongest_marker": "PDL1",
+      "target_gene": "CAV1",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "CD86g1",
+      "markers": {
+        "CD86": {
+          "guide_mean": 61.06,
+          "control_mean": 108.59,
+          "delta_mean": -47.53,
+          "log2fc": -0.8204
+        },
+        "PDL1": {
+          "guide_mean": 228.63,
+          "control_mean": 218.47,
+          "delta_mean": 10.16,
+          "log2fc": 0.0653
+        },
+        "PDL2": {
+          "guide_mean": 66.28,
+          "control_mean": 67.12,
+          "delta_mean": -0.84,
+          "log2fc": -0.0179
+        },
+        "CD366": {
+          "guide_mean": 40.95,
+          "control_mean": 43.19,
+          "delta_mean": -2.24,
+          "log2fc": -0.075
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 401,
+      "status": "measured",
+      "strongest_delta": -47.53,
+      "strongest_log2fc": -0.8204,
+      "strongest_marker": "CD86",
+      "target_gene": "CD86",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    },
+    {
+      "guide_id": "ATF2g4",
+      "markers": {
+        "CD86": {
+          "guide_mean": 113.85,
+          "control_mean": 108.59,
+          "delta_mean": 5.26,
+          "log2fc": 0.0676
+        },
+        "PDL1": {
+          "guide_mean": 222.9,
+          "control_mean": 218.47,
+          "delta_mean": 4.43,
+          "log2fc": 0.0289
+        },
+        "PDL2": {
+          "guide_mean": 67.48,
+          "control_mean": 67.12,
+          "delta_mean": 0.35,
+          "log2fc": 0.0075
+        },
+        "CD366": {
+          "guide_mean": 45.41,
+          "control_mean": 43.19,
+          "delta_mean": 2.22,
+          "log2fc": 0.0708
+        }
+      },
+      "n_control_cells": 2386,
+      "n_guide_cells": 283,
+      "status": "measured",
+      "strongest_delta": 5.26,
+      "strongest_log2fc": 0.0676,
+      "strongest_marker": "CD86",
+      "target_gene": "ATF2",
+      "source_file": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "source_status": "measured"
+    }
+  ]
+}

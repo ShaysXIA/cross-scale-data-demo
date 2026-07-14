@@ -1,0 +1,10 @@
+{
+  "artifact_type": "limitation_summary",
+  "description": "Full selected cDNA counts matrix is not present in the processed bridge. This file documents the limitation.",
+  "selected_cells_count": 8679,
+  "cDNA_counts_status": "missing",
+  "L3_blocker": true,
+  "L3_blocker_reason": "True L3 guide-vs-control RNA response requires expression counts or DE results. Only count summaries are available; no logFC/delta/top_genes can be derived.",
+  "generated_by": "scripts/stage2_2a_manifest_cdna_summary.py",
+  "run_id": "case45_p0_20260708T1015Z"
+}

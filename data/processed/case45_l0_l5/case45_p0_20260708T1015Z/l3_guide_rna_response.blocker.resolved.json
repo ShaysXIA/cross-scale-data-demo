@@ -1,0 +1,25 @@
+{
+  "downstream_impact": "L3 guide-vs-control RNA response cannot be evaluated. Stage 3+ analysis requiring L3 RNA response is blocked.",
+  "inspected_files": [
+    "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l3_rna_summary.json"
+  ],
+  "l3_top_keys": [
+    "source",
+    "n_guides",
+    "per_guide"
+  ],
+  "per_guide_keys_found": [],
+  "per_guide_sample": null,
+  "reason": "No guide-vs-control RNA response evidence found. Available per_guide data contains only count summaries (n_cells, total_umi, n_genes) without RNA response features such as delta, logFC, top differential genes, or expression-change evidence.",
+  "required_for_unblock": [
+    "Expression matrix with per-gene counts for guide and control cells",
+    "Differential expression results (logFC, adjusted p-value, top genes)",
+    "Or pre-computed per-guide RNA response with delta/logFC/top_genes"
+  ],
+  "resolution": "measured L3 guide-vs-control RNA response computed from raw cDNA counts",
+  "resolved_at": "2026-07-09T10:24:04.637557+00:00",
+  "resolved_by": "/root/SciForge/scripts/compute_l3_guide_rna_response_from_raw_cdna_optimized.py",
+  "stage": "2.2c",
+  "status": "blocked",
+  "timestamp": "2026-07-09T04:56:56Z"
+}

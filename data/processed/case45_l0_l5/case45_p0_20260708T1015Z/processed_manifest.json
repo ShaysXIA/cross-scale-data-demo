@@ -1,0 +1,124 @@
+{
+  "files": {
+    "entry_0": {
+      "limitations": [],
+      "name": "guide_cell_assignment.tsv",
+      "sha256": "5b28343001b3faef7c3f5949bbf6e606727b48488135345b321f813cb9b23140",
+      "size_bytes": 1305690,
+      "status": "measured"
+    },
+    "entry_1": {
+      "limitations": [],
+      "name": "metadata_cells.tsv",
+      "sha256": "ce0d937a2f76e4d21271fbb17ef4a3a5e7a7566a7cd8271a8e71cb8516ba8554",
+      "size_bytes": 2468007,
+      "status": "measured"
+    },
+    "entry_10": {
+      "limitation": "No RNA expression matrix or DE results available",
+      "name": "l3_guide_rna_response.blocker.json",
+      "source": "/root/SciForge/datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l3_rna_summary.json",
+      "status": "blocked"
+    },
+    "entry_2": {
+      "limitations": [],
+      "name": "raw_matrix_inventory.json",
+      "sha256": "1332eaabfd93a3ba008603b8957c8db2c0c72fed0371e92d613596c41da48ec3",
+      "size_bytes": 4182,
+      "status": "measured"
+    },
+    "entry_3": {
+      "limitations": [],
+      "name": "selected_adt_counts.tsv",
+      "sha256": "2a963466e8af200bdfee240ba0d4cfd66551fc8d4ad4d2d12bf9675b27465a5e",
+      "size_bytes": 287770,
+      "status": "measured"
+    },
+    "entry_4": {
+      "limitations": [
+        "summary_only"
+      ],
+      "name": "selected_cdna_counts.summary.json",
+      "sha256": "ae0b047e25066f9803d8381668f54d2e53babe61f1317f71140e52087946cfe0",
+      "size_bytes": 548,
+      "status": "limitation_summary"
+    },
+    "entry_5": {
+      "limitations": [],
+      "name": "selected_cdna_counts_limitation.md",
+      "sha256": "3d8c1d5ddec1e7ab4ec37c46bf65d29c461aa87206bd7344e3314926e064f243",
+      "size_bytes": 298,
+      "status": "measured"
+    },
+    "entry_6": {
+      "limitations": [
+        "summary_only"
+      ],
+      "name": "selected_cdna_counts_summary.tsv",
+      "sha256": "c6305a5386746a1401280930f06a480bbcaf355786a1eaf1c40356b6340246d1",
+      "size_bytes": 298,
+      "status": "limitation_summary"
+    },
+    "entry_7": {
+      "limitations": [],
+      "name": "selected_cells.tsv",
+      "sha256": "55783467db465edac3289d5f1ea2cdbbae6c8272ea60280b46ca1099be8ec222",
+      "size_bytes": 1021038,
+      "status": "measured"
+    },
+    "entry_8": {
+      "name": "l4_guide_adt_response.tsv",
+      "size": 18082,
+      "source": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "status": "measured"
+    },
+    "entry_9": {
+      "name": "l4_guide_adt_response.json",
+      "size": 36401,
+      "source": "datasets/case45_l0_l5/case45_p0_20260708T1015Z/tables/l4_adt_summary.json",
+      "status": "measured"
+    },
+    "l3_guide_rna_response.json": {
+      "path": "/root/SciForge/data/processed/case45_l0_l5/case45_p0_20260708T1015Z/l3_guide_rna_response.json",
+      "sha256": "e99502a13461bf0f7c51fc908001b00eea53f0e59f89a590c3232ac4e720805f",
+      "size_bytes": 125882
+    },
+    "l3_guide_rna_response.tsv": {
+      "path": "/root/SciForge/data/processed/case45_l0_l5/case45_p0_20260708T1015Z/l3_guide_rna_response.tsv",
+      "sha256": "377344a9178d2d130b2d8258fdb45c0bea55f3cd678f1bb562afc789f8fec5b1",
+      "size_bytes": 84888
+    }
+  },
+  "generated_by": "scripts/stage2_2a_manifest_cdna_summary.py",
+  "l3_generation_script": "/root/SciForge/scripts/compute_l3_guide_rna_response_from_raw_cdna_optimized.py",
+  "l3_metrics": {
+    "cdna_header_columns": 20730,
+    "cell_id_normalization": "matched l1_/lane-prefixed selected cell ids to raw cDNA barcodes",
+    "control_cells": 2142,
+    "gene_column": "",
+    "guide_count": 35,
+    "non_control_guides": 27,
+    "processed_genes": 18649,
+    "selected_cells_matched": 8435,
+    "selected_cells_requested": 8435
+  },
+  "l3_source_cdna_file": "/root/SciForge/data/raw/GSE153056/GSM4633614_ECCITE_cDNA_counts.tsv.gz",
+  "l3_status": "measured",
+  "l4_blocker_reason": "No measured per-guide ADT response values found in current processed bridge or L4 artifacts",
+  "l4_status": "blocked",
+  "processed_directory": "/root/SciForge/data/processed/case45_l0_l5/case45_p0_20260708T1015Z",
+  "required_contract": {
+    "guide_cell_assignment.tsv": "PASS",
+    "l3_guide_rna_response.*": "MISSING",
+    "l4_guide_adt_response.*": "MISSING",
+    "metadata_cells.tsv": "PASS",
+    "processed_manifest.json": "PASS",
+    "raw_matrix_inventory.json": "PASS",
+    "selected_adt_counts.*": "PASS",
+    "selected_cdna_counts.*": "LIMITATION_SUMMARY",
+    "selected_cells.tsv": "PASS"
+  },
+  "run_id": "case45_p0_20260708T1015Z",
+  "total_files": 8,
+  "updated": "2026-07-09T04:38Z"
+}

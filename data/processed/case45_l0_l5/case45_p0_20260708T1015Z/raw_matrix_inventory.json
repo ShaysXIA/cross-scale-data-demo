@@ -1,0 +1,149 @@
+{
+  "run_id": "case45_p0_20260708T1015Z",
+  "generated_at": "2026-07-09T03:13:03.773752+00:00",
+  "raw_directory": "/root/SciForge/data/raw/GSE153056",
+  "raw_files": [
+    {
+      "path": "data/raw/GSE153056/GSE153056_CITE_metadata.tsv.gz",
+      "size_bytes": 287588,
+      "sha256": "782669e7340a7e1cce289ccd3c48995589837769a602ef24eeee273fb6db685b",
+      "role": "metadata"
+    },
+    {
+      "path": "data/raw/GSE153056/GSE153056_ECCITE_Arrayed_metadata.tsv.gz",
+      "size_bytes": 738915,
+      "sha256": "37972c4df7727e527a74d4881c02e1bb26fe00a19560b27fcc3e17a30016d19c",
+      "role": "metadata"
+    },
+    {
+      "path": "data/raw/GSE153056/GSE153056_ECCITE_metadata.tsv.gz",
+      "size_bytes": 1061834,
+      "sha256": "7059b0cb857dc344e6bb53dbdc5ccadccb25bb069372ed6f45eff46b7e992a76",
+      "role": "metadata"
+    },
+    {
+      "path": "data/raw/GSE153056/GSE153056_RAW.tar",
+      "size_bytes": 128317440,
+      "sha256": null,
+      "role": "raw_archive"
+    },
+    {
+      "path": "data/raw/GSE153056/filelist.txt",
+      "size_bytes": 1760,
+      "sha256": "8d29aab6afcb92660933dc4487fffa94cf9deeca4e2af72d6974085bcc1d28c2",
+      "role": "inventory"
+    }
+  ],
+  "tar_members": [
+    {
+      "name": "GSM4633605_CITE_cDNA_counts.tsv.gz",
+      "size_bytes": 22773984,
+      "role": "cDNA_counts"
+    },
+    {
+      "name": "GSM4633606_CITE_ADT_Barcodes.csv.gz",
+      "size_bytes": 170,
+      "role": "ADT_counts_or_barcodes"
+    },
+    {
+      "name": "GSM4633606_CITE_ADT_counts.tsv.gz",
+      "size_bytes": 104383,
+      "role": "ADT_counts_or_barcodes"
+    },
+    {
+      "name": "GSM4633607_CITE_HTO_Barcodes.csv.gz",
+      "size_bytes": 123,
+      "role": "HTO_counts_or_barcodes"
+    },
+    {
+      "name": "GSM4633607_CITE_HTO_counts.tsv.gz",
+      "size_bytes": 72853,
+      "role": "HTO_counts_or_barcodes"
+    },
+    {
+      "name": "GSM4633608_ECCITE_Arrayed_cDNA_counts.tsv.gz",
+      "size_bytes": 39883220,
+      "role": "cDNA_counts"
+    },
+    {
+      "name": "GSM4633609_ECCITE_Arrayed_ADT_Barcodes.csv.gz",
+      "size_bytes": 124,
+      "role": "ADT_counts_or_barcodes"
+    },
+    {
+      "name": "GSM4633609_ECCITE_Arrayed_ADT_counts.tsv.gz",
+      "size_bytes": 150657,
+      "role": "ADT_counts_or_barcodes"
+    },
+    {
+      "name": "GSM4633610_ECCITE_Arrayed_HTO1_Barcodes.csv.gz",
+      "size_bytes": 187,
+      "role": "HTO_counts_or_barcodes"
+    },
+    {
+      "name": "GSM4633610_ECCITE_Arrayed_HTO_counts.tsv.gz",
+      "size_bytes": 187144,
+      "role": "HTO_counts_or_barcodes"
+    },
+    {
+      "name": "GSM4633611_ECCITE_Arrayed_HTO2_Barcodes.csv.gz",
+      "size_bytes": 194,
+      "role": "HTO_counts_or_barcodes"
+    },
+    {
+      "name": "GSM4633612_ECCITE_Arrayed_GDO_Barcodes.csv.gz",
+      "size_bytes": 270,
+      "role": "GDO_counts_or_barcodes"
+    },
+    {
+      "name": "GSM4633612_ECCITE_Arrayed_GO_CITE03_counts.tsv.gz",
+      "size_bytes": 170201,
+      "role": "GDO_counts_or_barcodes"
+    },
+    {
+      "name": "GSM4633613_ECCITE_Arrayed_GO_LENTI_counts.tsv.gz",
+      "size_bytes": 104861,
+      "role": "GDO_counts_or_barcodes"
+    },
+    {
+      "name": "GSM4633614_ECCITE_cDNA_counts.tsv.gz",
+      "size_bytes": 64135801,
+      "role": "cDNA_counts"
+    },
+    {
+      "name": "GSM4633615_ECCITE_ADT_Barcodes.csv.gz",
+      "size_bytes": 116,
+      "role": "ADT_counts_or_barcodes"
+    },
+    {
+      "name": "GSM4633615_ECCITE_ADT_counts.tsv.gz",
+      "size_bytes": 196344,
+      "role": "ADT_counts_or_barcodes"
+    },
+    {
+      "name": "GSM4633616_ECCITE_HTO_1-4_Barcodes.csv.gz",
+      "size_bytes": 164,
+      "role": "HTO_counts_or_barcodes"
+    },
+    {
+      "name": "GSM4633616_ECCITE_HTO_counts.tsv.gz",
+      "size_bytes": 170306,
+      "role": "HTO_counts_or_barcodes"
+    },
+    {
+      "name": "GSM4633617_ECCITE_HTO_5-8_Barcodes.csv.gz",
+      "size_bytes": 160,
+      "role": "HTO_counts_or_barcodes"
+    },
+    {
+      "name": "GSM4633618_ECCITE_GDO_Barcodes.csv.gz",
+      "size_bytes": 1242,
+      "role": "GDO_counts_or_barcodes"
+    },
+    {
+      "name": "GSM4633618_ECCITE_GDO_counts.tsv.gz",
+      "size_bytes": 337680,
+      "role": "GDO_counts_or_barcodes"
+    }
+  ]
+}
